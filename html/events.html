@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCon | Events</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/events.css">
+    <script src="../js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <h2>
+          <a href="home.html" class="brand">
+            <img src="../images/SV Favicon.png" alt="SCon logo" />
+            <span>SCon</span>
+          </a>
+        </h2>
+
+        <div class="nav-links">
+          <a href="home.html">Home</a>
+          <a href="discover.html">Discover</a>
+          <a href="events.html">Events</a>
+          <a href="organizations.html">Organizations</a>
+          <a href="achievements.html">Achievements</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="events-hero">
+        <span class="events-label">CAMPUS LIFE</span>
+        <h1>Campus Events</h1>
+        <p>
+          Discover upcoming activities, join campus celebrations, and find
+          opportunities to connect with fellow students.
+        </p>
+      </section>
+
+      <section class="featured-event">
+        <div class="featured-content">
+          <span class="event-tag">🏆 FEATURED CAMPUS EVENT</span>
+          <h2>CHMSU Intramurals 2026</h2>
+          <p>
+            Get ready for a week of sports, teamwork, school spirit, and friendly
+            competition! Connect with fellow students and support your teams
+            during the campus intramurals.
+          </p>
+          <div class="event-details">
+            <span>📅 Last week of October 2026</span>
+            <span>📍 CHMSU Campus</span>
+            <span>ℹ️ Exact schedule to be announced</span>
+          </div>
+          <a href="#upcoming-events" class="event-button">View Event Details →</a>
+        </div>
+
+        <div class="featured-visual intramurals-visual">
+          <span>🏆</span>
+          <p>CHMSU Intramurals</p>
+          <small>One Campus. One Community. One Team.</small>
+        </div>
+      </section>
+
+      <section class="upcoming-events" id="upcoming-events">
+        <div class="upcoming-heading">
+          <span class="section-label">SAVE THE DATE</span>
+          <h2>What's Happening?</h2>
+          <p>Stay updated on the activities planned for intramurals.</p>
+        </div>
+
+
+<div class="event-filters">
+    <button class="event-filter active" data-filter="all" type="button">
+        All Events
+    </button>
+
+    <button class="event-filter" data-filter="sports" type="button">
+        Sports
+    </button>
+
+    <button class="event-filter" data-filter="campus-life" type="button">
+        Campus Life
+    </button>
+
+    <button class="event-filter" data-filter="announcements" type="button">
+        Announcements
+    </button>
+</div>
+
+
+<div class="event-cards">
+    <article class="event-info-card" data-category="sports">
+        <span class="event-info-icon">🏀</span>
+        <span class="event-category">SPORTS</span>
+        <h3>Sports Competitions</h3>
+        <p>
+            Cheer for your team and enjoy exciting sports
+            competitions throughout intramurals.
+        </p>
+
+        <details class="event-more">
+            <summary>View details</summary>
+            <div class="event-more-content">
+                <p>
+                    Intramurals can bring students together through
+                    friendly competition and school spirit.
+                </p>
+                <p><strong>When:</strong> Last week of October 2026, planned</p>
+                <p><strong>Schedule:</strong> To be announced</p>
+            </div>
+        </details>
+
+        <small>Schedule to be announced</small>
+    </article>
+
+    <article class="event-info-card" data-category="campus-life">
+        <span class="event-info-icon">🎉</span>
+        <span class="event-category">CAMPUS LIFE</span>
+        <h3>School Spirit &amp; Activities</h3>
+        <p>
+            Celebrate campus pride, support your fellow students,
+            and enjoy the intramurals atmosphere.
+        </p>
+
+        <details class="event-more">
+            <summary>View details</summary>
+            <div class="event-more-content">
+                <p>
+                    Stay tuned for campus activities and celebrations
+                    planned as part of the intramurals.
+                </p>
+                <p><strong>Location:</strong> CHMSU Campus</p>
+                <p><strong>Activities:</strong> Official details pending</p>
+            </div>
+        </details>
+
+        <small>Details to be announced</small>
+    </article>
+
+    <article class="event-info-card" data-category="announcements">
+        <span class="event-info-icon">📢</span>
+        <span class="event-category">ANNOUNCEMENTS</span>
+        <h3>Official Event Updates</h3>
+        <p>
+            Check SCon for announcements about schedules,
+            activities, and intramurals information.
+        </p>
+
+        <details class="event-more">
+            <summary>View details</summary>
+            <div class="event-more-content">
+                <p>
+                    Check this section for future updates when
+                    official event information becomes available.
+                </p>
+                <p><strong>Exact dates:</strong> Not yet confirmed here</p>
+                <p><strong>Source:</strong> Official campus announcements</p>
+            </div>
+        </details>
+
+        <small>Updates coming soon</small>
+    </article>
+</div>
+
+      </section>
+    </main>
+  </body>
+</html>

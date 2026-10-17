@@ -1,0 +1,291 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>SCon | Organizations</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/organizations.css">
+    <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h2>
+                <a href="home.html" class="brand">
+                    <img src="../images/SV Favicon.png" alt="SCon logo" />
+                    <span>SCon</span>
+                </a>
+            </h2>
+
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="discover.html">Discover</a>
+                <a href="events.html">Events</a>
+                <a href="organizations.html">Organizations</a>
+                <a href="achievements.html">Achievements</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ORGANIZATIONS HERO -->
+        <section class="org-hero">
+            <div class="org-hero-content">
+                <span class="org-hero-label">YOUR CAMPUS, YOUR COMMUNITY</span>
+
+                <h1>
+                    Find Your People.<br />
+                    <span>Find Your Organization.</span>
+                </h1>
+
+                <p>
+                    Discover the clubs and organizations that bring
+                    CHMSU students together through technology, creativity,
+                    campus journalism, service, and shared interests.
+                </p>
+
+                <a href="#org-directory" class="org-hero-button">
+                    Explore Organizations ↓
+                </a>
+            </div>
+
+            <div class="org-hero-decoration" aria-hidden="true">
+                <div class="org-orbit org-orbit-one"></div>
+                <div class="org-orbit org-orbit-two"></div>
+                <div class="org-hero-logo">
+    <img src="../images/chmsu_logo.png" alt="CHMSU Campus Logo">
+</div>
+                <span class="org-float org-float-one">💻</span>
+                <span class="org-float org-float-two">🎨</span>
+                <span class="org-float org-float-three">🤝</span>
+            </div>
+        </section>
+
+        <!-- ORGANIZATION DIRECTORY -->
+        <section class="org-directory" id="org-directory">
+            <div class="org-heading">
+                <span class="org-section-label">EXPLORE THE COMMUNITY</span>
+                <h2>Meet the Organizations</h2>
+                <p>
+                    Find a community that matches your interests,
+                    passions, and the things you want to contribute.
+                </p>
+            </div>
+
+            <!-- CATEGORY FILTERS -->
+            <div class="org-filters" aria-label="Filter organizations">
+                <button
+                    class="org-filter active"
+                    type="button"
+                    data-org-filter="all"
+                    aria-pressed="true"
+                >
+                    All Organizations
+                </button>
+
+                <button
+                    class="org-filter"
+                    type="button"
+                    data-org-filter="esports"
+                    aria-pressed="false"
+                >
+                    Esports
+                </button>
+
+                <button
+                    class="org-filter"
+                    type="button"
+                    data-org-filter="academic"
+                    aria-pressed="false"
+                >
+                    Academic
+                </button>
+
+                <button
+                    class="org-filter"
+                    type="button"
+                    data-org-filter="arts-media"
+                    aria-pressed="false"
+                >
+                    Arts &amp; Media
+                </button>
+
+                <button
+                    class="org-filter"
+                    type="button"
+                    data-org-filter="service-support"
+                    aria-pressed="false"
+                >
+                    Service &amp; Support
+                </button>
+            </div>
+
+            <p class="org-results" aria-live="polite">
+                Showing all 7 organizations
+            </p>
+
+            <div class="org-grid">
+
+                <!-- 1. CHMSU PYTHON ESPORTS CLUB -->
+                <article class="org-card org-esports" data-org-category="esports">
+                    <div class="org-card-top">
+                        <div class="org-icon">🎮</div>
+                        <span class="org-type">ESPORTS</span>
+                    </div>
+
+                    <h3>CHMSU Python Esports Club</h3>
+
+                    <p>
+                        A competitive gaming and esports organization
+                        for students interested in gaming and competition.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Gaming &amp; Competition</span>
+                    </div>
+                </article>
+
+                <!-- 2. IT SOCIETY -->
+                <article class="org-card org-academic" data-org-category="academic">
+                    <div class="org-card-top">
+                        <div class="org-icon">💻</div>
+                        <span class="org-type">ACADEMIC</span>
+                    </div>
+
+                    <h3>IT Society</h3>
+
+                    <p>
+                        The Information Technology student body,
+                        connecting IT students through their academic
+                        community.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Information Technology</span>
+                    </div>
+                </article>
+
+                <!-- 3. THE TECHNOPACER -->
+                <article class="org-card org-media" data-org-category="arts-media">
+                    <div class="org-card-top">
+                        <div class="org-icon">📰</div>
+                        <span class="org-type">PUBLICATION</span>
+                    </div>
+
+                    <h3>The Technopacer</h3>
+
+                    <p>
+                        The campus student publication's Alijis bureau,
+                        focused on student journalism and campus news.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Campus Journalism</span>
+                    </div>
+                </article>
+
+                <!-- 4. CAVOCALS -->
+                <article class="org-card org-performing" data-org-category="arts-media">
+                    <div class="org-card-top">
+                        <div class="org-icon">🎤</div>
+                        <span class="org-type">PERFORMING ARTS</span>
+                    </div>
+
+                    <h3>CaVocals</h3>
+
+                    <p>
+                        A campus vocal and singing ensemble for students
+                        interested in singing and musical performance.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Music &amp; Singing</span>
+                    </div>
+                </article>
+
+                <!-- 5. ARTISAN'S SOCIETY -->
+                <article class="org-card org-creative" data-org-category="arts-media">
+                    <div class="org-card-top">
+                        <div class="org-icon">🎨</div>
+                        <span class="org-type">CREATIVE ARTS</span>
+                    </div>
+
+                    <h3>Artisan's Society</h3>
+
+                    <p>
+                        A visual and creative arts group for students
+                        interested in artistic expression and creativity.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Visual &amp; Creative Arts</span>
+                    </div>
+                </article>
+
+                <!-- 6. RED CROSS YOUTH ALIJIS -->
+                <article class="org-card org-service" data-org-category="service-support">
+                    <div class="org-card-top">
+                        <div class="org-icon">❤️</div>
+                        <span class="org-type">VOLUNTEER SERVICE</span>
+                    </div>
+
+                    <h3>Red Cross Youth Alijis</h3>
+
+                    <p>
+                        A humanitarian and youth volunteer group
+                        dedicated to service and helping others.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Humanitarian Service</span>
+                    </div>
+                </article>
+
+                <!-- 7. CPF -->
+                <article class="org-card org-support" data-org-category="service-support">
+                    <div class="org-card-top">
+                        <div class="org-icon">🤝</div>
+                        <span class="org-type">PEER SUPPORT</span>
+                    </div>
+
+                    <h3>CPF</h3>
+
+                    <p>
+                        The Circle of Peer Facilitators, bringing
+                        together students involved in peer facilitation
+                        and student support.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Peer Facilitation</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="org-empty" hidden>
+                No organizations found in this category.
+            </div>
+        </section>
+    </main>
+
+    <footer class="org-footer">
+        <p>© 2026 SCon — Students Connect</p>
+        <span>Connecting students, one community at a time.</span>
+    </footer>
+</body>
+</html>
