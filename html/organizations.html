@@ -18,6 +18,7 @@
     <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/organizations.css">
+    <link rel="stylesheet" href="../css/pages.css" />
     <script src="../js/script.js" defer></script>
 </head>
 
@@ -35,14 +36,41 @@
                 <a href="home.html">Home</a>
                 <a href="discover.html">Discover</a>
                 <a href="events.html">Events</a>
-                <a href="organizations.html">Organizations</a>
+                <a href="organizations.html" aria-current="page">Organizations</a>
                 <a href="achievements.html">Achievements</a>
             </div>
-        </nav>
+                <div class="navbar-actions">
+          <div class="account-menu-wrap">
+            <button
+              class="account-menu-toggle"
+              type="button"
+              aria-label="Open account menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="account-menu"
+            >
+              <img src="../images/SCon Students Connect Logo.png" alt="" />
+              <span class="account-menu-label">Account</span>
+              <span class="account-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <div class="account-menu-profile">
+                <img src="../images/SCon Students Connect Logo.png" alt="" />
+                <span><strong>SCon Account</strong><small>Local demo profile</small></span>
+              </div>
+              <a href="profile.html" role="menuitem">My Profile</a>
+              <a href="settings.html" role="menuitem">Settings</a>
+              <a href="saved-posts.html" role="menuitem">Saved Posts</a>
+              <a href="help-support.html" role="menuitem">Help &amp; Support</a>
+              <div class="account-menu-divider" role="separator"></div>
+              <a href="guest.html" role="menuitem">Sign Out / Guest</a>
+            </div>
+          </div>
+        </div>      </nav>
     </header>
 
     <main>
-        <!-- ORGANIZATIONS HERO -->
+
         <section class="org-hero">
             <div class="org-hero-content">
                 <span class="org-hero-label">YOUR CAMPUS, YOUR COMMUNITY</span>
@@ -63,19 +91,8 @@
                 </a>
             </div>
 
-            <div class="org-hero-decoration" aria-hidden="true">
-                <div class="org-orbit org-orbit-one"></div>
-                <div class="org-orbit org-orbit-two"></div>
-                <div class="org-hero-logo">
-    <img src="../images/chmsu_logo.png" alt="CHMSU Campus Logo">
-</div>
-                <span class="org-float org-float-one">💻</span>
-                <span class="org-float org-float-two">🎨</span>
-                <span class="org-float org-float-three">🤝</span>
-            </div>
         </section>
 
-        <!-- ORGANIZATION DIRECTORY -->
         <section class="org-directory" id="org-directory">
             <div class="org-heading">
                 <span class="org-section-label">EXPLORE THE COMMUNITY</span>
@@ -86,7 +103,8 @@
                 </p>
             </div>
 
-            <!-- CATEGORY FILTERS -->
+            <label class="feature-search org-search"><span aria-hidden="true">⌕</span><input id="org-search" type="search" placeholder="Search organizations..." aria-label="Search organizations"></label>
+
             <div class="org-filters" aria-label="Filter organizations">
                 <button
                     class="org-filter active"
@@ -135,15 +153,15 @@
             </div>
 
             <p class="org-results" aria-live="polite">
-                Showing all 7 organizations
+                Showing all 8 organizations
             </p>
 
             <div class="org-grid">
 
-                <!-- 1. CHMSU PYTHON ESPORTS CLUB -->
-                <article class="org-card org-esports" data-org-category="esports">
+                <a class="org-card org-esports" id="org-pythons" data-org-category="esports" href="https://www.facebook.com/CHMSUPythonsOfficial" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/pythons.png" alt="CHMSU Python Esports Club" />
                     <div class="org-card-top">
-                        <div class="org-icon">🎮</div>
+                        <img class="org-icon" src="../images/pythons.png" alt="Python Esports Club">
                         <span class="org-type">ESPORTS</span>
                     </div>
 
@@ -154,15 +172,16 @@
                         for students interested in gaming and competition.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Gaming &amp; Competition</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 2. IT SOCIETY -->
-                <article class="org-card org-academic" data-org-category="academic">
+                <a class="org-card org-academic" id="org-it-society" data-org-category="academic" href="https://www.facebook.com/profile.php?id=61550691064710" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/it_society.png" alt="IT Society" />
                     <div class="org-card-top">
-                        <div class="org-icon">💻</div>
+                        <img class="org-icon" src="../images/it_society.png" alt="IT Society">
                         <span class="org-type">ACADEMIC</span>
                     </div>
 
@@ -174,15 +193,16 @@
                         community.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Information Technology</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 3. THE TECHNOPACER -->
-                <article class="org-card org-media" data-org-category="arts-media">
+                <a class="org-card org-media" id="org-technopacer" data-org-category="arts-media" href="https://www.facebook.com/technopaceralijis" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/technopacer.png" alt="The Technopacer" />
                     <div class="org-card-top">
-                        <div class="org-icon">📰</div>
+                        <img class="org-icon" src="../images/technopacer.png" alt="The Technopacer">
                         <span class="org-type">PUBLICATION</span>
                     </div>
 
@@ -193,15 +213,16 @@
                         focused on student journalism and campus news.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Campus Journalism</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 4. CAVOCALS -->
-                <article class="org-card org-performing" data-org-category="arts-media">
+                <a class="org-card org-performing" id="org-cavocals" data-org-category="arts-media" href="https://www.facebook.com/CaVocals" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/cavocals.png" alt="CaVocals" />
                     <div class="org-card-top">
-                        <div class="org-icon">🎤</div>
+                        <img class="org-icon" src="../images/cavocals.png" alt="CaVocals">
                         <span class="org-type">PERFORMING ARTS</span>
                     </div>
 
@@ -212,15 +233,16 @@
                         interested in singing and musical performance.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Music &amp; Singing</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 5. ARTISAN'S SOCIETY -->
-                <article class="org-card org-creative" data-org-category="arts-media">
+                <a class="org-card org-creative" id="org-artisans" data-org-category="arts-media" href="https://www.facebook.com/ArtisansSocietyCHMSUAlijis" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/artisans_society.png" alt="Artisan's Society" />
                     <div class="org-card-top">
-                        <div class="org-icon">🎨</div>
+                        <img class="org-icon" src="../images/artisans_society.png" alt="Artisan's Society">
                         <span class="org-type">CREATIVE ARTS</span>
                     </div>
 
@@ -231,15 +253,16 @@
                         interested in artistic expression and creativity.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Visual &amp; Creative Arts</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 6. RED CROSS YOUTH ALIJIS -->
-                <article class="org-card org-service" data-org-category="service-support">
+                <a class="org-card org-service" id="org-red-cross-youth" data-org-category="service-support" href="https://www.facebook.com/profile.php?id=61566972231800" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/red_cross.png" alt="Red Cross Youth Alijis" />
                     <div class="org-card-top">
-                        <div class="org-icon">❤️</div>
+                        <img class="org-icon" src="../images/red_cross.png" alt="Red Cross Youth Alijis">
                         <span class="org-type">VOLUNTEER SERVICE</span>
                     </div>
 
@@ -250,15 +273,16 @@
                         dedicated to service and helping others.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Humanitarian Service</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
-                <!-- 7. CPF -->
-                <article class="org-card org-support" data-org-category="service-support">
+                <a class="org-card org-support" id="org-cpf" data-org-category="service-support" href="https://www.facebook.com/profile.php?id=61565095808386" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/cpf.png" alt="CPF" />
                     <div class="org-card-top">
-                        <div class="org-icon">🤝</div>
+                        <img class="org-icon" src="../images/cpf.png" alt="Circle of Peer Facilitators">
                         <span class="org-type">PEER SUPPORT</span>
                     </div>
 
@@ -270,11 +294,33 @@
                         and student support.
                     </p>
 
+                    <p class="org-join-note">Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.</p>
                     <div class="org-card-footer">
                         <span class="org-interest">Peer Facilitation</span>
-                    </div>
-                </article>
+                </div>
+                </a>
 
+                <a class="org-card org-government" id="org-cusg" data-org-category="service-support" href="https://www.facebook.com/search/top?q=CHMSU%20University%20Student%20Government%20Alijis" target="_blank" rel="noopener noreferrer">
+                    <img class="org-card-image" src="../images/CUSG.png" alt="CHMSU University Student Government - CUSG" />
+                    <div class="org-card-top">
+                        <img class="org-icon" src="../images/CUSG.png" alt="" />
+                        <span class="org-type">STUDENT GOVERNMENT</span>
+                    </div>
+
+                    <h3>CHMSU University Student Government - CUSG</h3>
+
+                    <p>
+                        A student government organization representing students and supporting campus leadership and engagement.
+                    </p>
+
+                    <p class="org-join-note">
+                        Interested in joining? Send the organization a message or visit its Facebook page to learn how to get involved.
+                    </p>
+
+                    <div class="org-card-footer">
+                        <span class="org-interest">Student Leadership</span>
+                    </div>
+                </a>
             </div>
 
             <div class="org-empty" hidden>
@@ -283,9 +329,29 @@
         </section>
     </main>
 
-    <footer class="org-footer">
-        <p>© 2026 SCon — Students Connect</p>
-        <span>Connecting students, one community at a time.</span>
+    <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="home.html" class="footer-logo">SCon<span>.</span></a>
+                <p>Students Connect — your campus community, all in one place. Discover events, connect with organizations, and celebrate student achievements.</p>
+                <span class="footer-tagline">Discover. Connect. Participate.</span>
+            </div>
+
+            <div class="footer-links"><h3>Explore</h3><a href="home.html">Home</a><a href="discover.html">Discover</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="tryouts-auditions.html">Tryouts &amp; Auditions</a><a href="campus-calendar.html">Campus Calendar</a><a href="about.html">About SCon</a></div>
+
+        <div class="footer-links"><h3>Community</h3><a href="organizations.html">Organizations</a><a href="achievements.html">Achievements</a><a href="profile.html">My Profile</a><a href="saved-posts.html">Saved Posts</a><a href="settings.html">Settings</a><a href="help-support.html">Help &amp; Support</a><a href="community-guidelines.html">Community Guidelines</a><a href="guest.html">Sign Out / Guest</a></div>
+
+            <div class="footer-message">
+                <span class="footer-message-icon" aria-hidden="true">✦</span>
+                <h3>Your campus story starts here.</h3>
+                <p>Be part of the community. Find your place at CHMSU.</p>
+                <a href="discover.html" class="footer-cta">Discover SCon <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+      <div class="footer-bottom">
+            <p>© 2026 SCon — Students Connect.</p>
+            <p>Made for the campus community.</p>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,0 +1,58 @@
+
+.scon-page { background: #f4f7fb; color: #102a4a; }
+.scon-page-hero { padding: clamp(38px, 6vw, 72px) max(6%, calc((100% - 1180px) / 2)); background: linear-gradient(125deg, #102a4a, #245b91 68%, #3478c8); color: #fff; }
+.scon-page-hero h1 { margin: 8px 0 12px; font-size: clamp(32px, 5vw, 54px); line-height: 1.08; }
+.scon-page-hero p { max-width: 720px; font-size: 17px; line-height: 1.7; color: #e3efff; }
+.scon-page-hero small { display: block; margin-top: 14px; color: #d2e4fb; font-size: 12px; }
+.scon-kicker { color: #4f83b8; font-size: 11px; font-weight: 800; letter-spacing: .12em; }
+.scon-page-hero .scon-kicker { color: #bfdbfe; }
+.scon-page-content { width: min(1180px, 88%); margin: 34px auto 70px; display: grid; gap: 22px; }
+.scon-panel { padding: 24px; border: 1px solid #e1e8f0; border-radius: 18px; background: #fff; box-shadow: 0 8px 25px rgba(16,42,74,.05); }
+.scon-panel h2 { margin: 0 0 12px; font-size: 21px; }
+.scon-panel p { margin: 0 0 14px; color: #53657b; line-height: 1.7; }
+.scon-panel a, .scon-page-content > a { color: #2563a6; font-weight: 700; text-decoration: none; }
+.scon-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.scon-card-grid > .scon-panel { min-width: 0; }
+.scon-card-grid img { width: 100%; height: 170px; margin: -24px -24px 18px; width: calc(100% + 48px); object-fit: cover; border-radius: 18px 18px 0 0; }
+.scon-toolbar, .scon-filter-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.scon-toolbar { justify-content: space-between; }
+.scon-filter-row button, .scon-button, .scon-button-link { padding: 10px 15px; border: 1px solid #d4e0ee; border-radius: 10px; background: #fff; color: #234668; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; }
+.scon-filter-row button.is-active, .scon-button { border-color: #2563a6; background: #2563a6; color: #fff; }
+.scon-empty { padding: 24px; border: 1px dashed #b6c8dc; border-radius: 14px; color: #60738a; text-align: center; }
+.scon-setting { display: flex; justify-content: space-between; gap: 20px; padding: 18px 0; border-top: 1px solid #e8edf3; }
+.scon-setting span, .scon-setting small { display: block; }
+.scon-setting small { margin-top: 5px; color: #64748b; }
+.scon-setting input { width: 20px; height: 20px; accent-color: #3478c8; }
+.scon-search, .scon-form label { display: grid; gap: 8px; color: #334b64; font-size: 13px; font-weight: 700; }
+.scon-search input, .scon-form input { width: 100%; padding: 12px 14px; border: 1px solid #cbd7e5; border-radius: 10px; font: inherit; }
+.scon-faq-list { display: grid; gap: 12px; }
+.scon-faq { padding: 18px 20px; border: 1px solid #e1e8f0; border-radius: 14px; background: #fff; }
+.scon-faq summary { color: #1c3f64; font-weight: 700; cursor: pointer; }
+.scon-faq p { margin: 12px 0 0; color: #53657b; line-height: 1.65; }
+.scon-form { display: grid; gap: 18px; }
+.scon-status { min-height: 1em; color: #2563a6 !important; font-weight: 700; }
+.scon-note { padding: 16px 18px; border-left: 3px solid #3478c8; border-radius: 8px; background: #eaf2fb; color: #42566d; line-height: 1.6; }
+.scon-guidelines { display: grid; gap: 16px; padding-left: 24px; color: #53657b; line-height: 1.7; }
+.scon-calendar-list { display: grid; gap: 12px; }
+.scon-calendar-item { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 20px; padding: 20px; border: 1px solid #e1e8f0; border-radius: 16px; background: #fff; }
+.scon-date { align-self: start; padding: 10px; border-radius: 10px; background: #eaf2fb; color: #245b91; font-size: 12px; font-weight: 800; text-align: center; }
+.scon-calendar-item h2 { margin-bottom: 6px; font-size: 19px; }
+.scon-calendar-item p { margin: 0 0 10px; color: #53657b; line-height: 1.6; }
+.scon-calendar-item a { color: #2563a6; font-weight: 700; text-decoration: none; }
+.account-menu > [role="menuitem"] { display: block; width: 100%; padding: 10px; border-radius: 8px; color: #29445f; font-size: 13px; text-align: left; text-decoration: none; }
+.account-menu > [role="menuitem"]:hover, .account-menu > [role="menuitem"]:focus-visible { outline: none; background: #f1f6fc; }
+.save-post-button { display: inline-flex; align-items: center; gap: 7px; margin: 7px 0 0 2px; padding: 5px 8px; border: 0; border-radius: 7px; background: transparent; color: #61748a; font: inherit; font-size: 12px; font-weight: 600; cursor: pointer; }
+.save-post-button:hover, .save-post-button:focus-visible { outline: none; background: #f2f6fb; color: #245b91; }
+.save-post-button[aria-pressed="true"] { color: #245b91; }
+.save-post-button span:first-child { font-size: 17px; line-height: 1; }
+.scon-saved-card { overflow: hidden; }
+.scon-saved-card img { width: 100%; height: 165px; object-fit: cover; }
+.scon-saved-card-copy { padding: 18px; }
+.scon-saved-card h2 { margin: 0 0 8px; font-size: 18px; }
+.scon-saved-card p { margin: 0 0 14px; color: #53657b; line-height: 1.6; }
+.scon-saved-card-actions { display: flex; gap: 12px; align-items: center; }
+.scon-saved-card-actions button { border: 0; background: none; color: #a23d48; font: inherit; cursor: pointer; }
+.scon-compact .update-card, .scon-compact .discover-post { padding-bottom: 12px; }
+.scon-reduce-motion *, .scon-reduce-motion *::before, .scon-reduce-motion *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+@media (max-width: 760px) { .scon-card-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .scon-calendar-item { grid-template-columns: 1fr; gap: 10px; } }
+@media (max-width: 560px) { .scon-page-content { width: 90%; margin-top: 22px; } .scon-card-grid { grid-template-columns: 1fr; } .scon-panel { padding: 19px; } .scon-card-grid img { width: calc(100% + 38px); margin: -19px -19px 16px; } 

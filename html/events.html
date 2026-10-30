@@ -11,6 +11,7 @@
     <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/events.css">
+    <link rel="stylesheet" href="../css/pages.css" />
     <script src="../js/script.js" defer></script>
   </head>
 
@@ -27,9 +28,39 @@
         <div class="nav-links">
           <a href="home.html">Home</a>
           <a href="discover.html">Discover</a>
-          <a href="events.html">Events</a>
+          <a href="events.html" aria-current="page">Events</a>
           <a href="organizations.html">Organizations</a>
           <a href="achievements.html">Achievements</a>
+        </div>
+
+        <div class="navbar-actions">
+          <div class="account-menu-wrap">
+            <button
+              class="account-menu-toggle"
+              type="button"
+              aria-label="Open account menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="account-menu"
+            >
+              <img src="../images/SCon Students Connect Logo.png" alt="" />
+              <span class="account-menu-label">Account</span>
+              <span class="account-menu-caret" aria-hidden="true">▾</span>
+            </button>
+
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <div class="account-menu-profile">
+                <img src="../images/SCon Students Connect Logo.png" alt="" />
+                <span><strong>SCon Account</strong><small>Local demo profile</small></span>
+              </div>
+              <a href="profile.html" role="menuitem">My Profile</a>
+              <a href="settings.html" role="menuitem">Settings</a>
+              <a href="saved-posts.html" role="menuitem">Saved Posts</a>
+              <a href="help-support.html" role="menuitem">Help &amp; Support</a>
+              <div class="account-menu-divider" role="separator"></div>
+              <a href="guest.html" role="menuitem">Sign Out / Guest</a>
+            </div>
+          </div>
         </div>
       </nav>
     </header>
@@ -44,132 +75,334 @@
         </p>
       </section>
 
-      <section class="featured-event">
-        <div class="featured-content">
-          <span class="event-tag">🏆 FEATURED CAMPUS EVENT</span>
-          <h2>CHMSU Intramurals 2026</h2>
-          <p>
-            Get ready for a week of sports, teamwork, school spirit, and friendly
-            competition! Connect with fellow students and support your teams
-            during the campus intramurals.
-          </p>
-          <div class="event-details">
-            <span>📅 Last week of October 2026</span>
-            <span>📍 CHMSU Campus</span>
-            <span>ℹ️ Exact schedule to be announced</span>
-          </div>
-          <a href="#upcoming-events" class="event-button">View Event Details →</a>
+      <section class="event-carousel" aria-label="Featured CHMSU events">
+        <div class="event-carousel-track" id="event-carousel-track">
+          <article class="featured-event" id="event-intramurals">
+            <div class="featured-content">
+              <span class="event-tag">🏆 TRY OUT</span>
+              <h2>CHMSU Intramurals 2026</h2>
+              <p>
+                Sports, teamwork, and school spirit bring students together for
+                friendly campus competition.
+              </p>
+              <div class="event-details">
+                <span>📅 Tryout dates listed in this project: October 19–22, 2026 · Confirm with organizer</span>
+                <span>🏆 Intramurals date listed in this project: October 26, 2026 · Confirm with organizer</span>
+                <span>📍 CHMSU Alijis Campus</span>
+              </div>
+              <a href="#participation-opportunities" class="event-button">
+                Choose your tryout →
+              </a>
+            </div>
+
+            <div class="featured-visual intramurals-visual">
+              <img src="../images/intramurals.png" alt="CHMSU campus intramurals" />
+            </div>
+          </article>
+
+          <article class="featured-event" id="event-innovation-fair">
+            <div class="featured-content">
+              <span class="event-tag">💡 KNOW YOUR PLACE</span>
+              <h2>CHMSU Student Innovation Fair</h2>
+              <p>
+                Explore student-built projects, meet their creators, and get
+                ideas for your own class or club project.
+              </p>
+              <div class="event-details">
+                <span>📅 November 2026 listed in this project · Confirm with organizer</span>
+                <span>📍 CHMSU Alijis Campus</span>
+                <span>👥 Open to students</span>
+              </div>
+              <a href="#upcoming-events" class="event-button">
+                See all events →
+              </a>
+            </div>
+
+            <div class="featured-visual intramurals-visual">
+              <img src="../images/know_your_place.png" alt="Students sharing a campus project" />
+            </div>
+          </article>
+
+          <article class="featured-event" id="event-cavocals">
+            <div class="featured-content">
+              <span class="event-tag">🎤 TRY OUT</span>
+              <h2>CaVocals Auditions</h2>
+              <p>
+                Bring a song that shows your style and meet fellow students who
+                share your interest in singing and performance.
+              </p>
+              <div class="event-details">
+                <span>📅 October 24, 2026 listed in this project · Confirm with organizer</span>
+                <span>📍 CHMSU Alijis Campus</span>
+                <span>🎤 Open to interested students</span>
+              </div>
+              <a href="#audition-cavocals" class="event-button">
+                Audition Now →
+              </a>
+            </div>
+
+            <div class="featured-visual intramurals-visual">
+              <img src="../images/cavocals.png" alt="CHMSU students performing together" />
+            </div>
+          </article>
         </div>
 
-        <div class="featured-visual intramurals-visual">
-          <span>🏆</span>
-          <p>CHMSU Intramurals</p>
-          <small>One Campus. One Community. One Team.</small>
-        </div>
+        <button
+          class="carousel-button carousel-previous"
+          type="button"
+          aria-label="Previous featured event"
+        >
+          ‹
+        </button>
+        <button
+          class="carousel-button carousel-next"
+          type="button"
+          aria-label="Next featured event"
+        >
+          ›
+        </button>
       </section>
 
       <section class="upcoming-events" id="upcoming-events">
         <div class="upcoming-heading">
           <span class="section-label">SAVE THE DATE</span>
-          <h2>What's Happening?</h2>
-          <p>Stay updated on the activities planned for intramurals.</p>
+          <h2>More ways to take part</h2>
+          <p>
+            Find a way to get involved—from intramurals tryouts to campus
+            performances and creative volunteer opportunities.
+          </p>
         </div>
 
+        <div class="feature-toolbar">
+          <label class="feature-search">
+            <span aria-hidden="true">⌕</span>
+            <input
+              id="event-search"
+              type="search"
+              placeholder="Search tryouts, clubs, or activities..."
+              aria-label="Search participation opportunities"
+            />
+          </label>
+          <p class="event-search-hint">
+            Looking for a way to join? Search an activity or open a card for
+            details.
+          </p>
+        </div>
 
-<div class="event-filters">
-    <button class="event-filter active" data-filter="all" type="button">
-        All Events
-    </button>
+        <div class="participation-choices-heading" id="participation-opportunities">
+          <span class="event-category">INTRAMURALS TRYOUTS</span>
+          <h2>Choose your tryout</h2>
+          <p>
+            Select basketball or volleyball below to review the details and
+            review the details and contact the organizer to confirm next steps.
+          </p>
+        </div>
 
-    <button class="event-filter" data-filter="sports" type="button">
-        Sports
-    </button>
+        <div class="event-cards">
+          <article
+            class="event-info-card opportunity-card"
+            id="tryout-basketball"
+            data-category="sports"
+          >
+            <img
+              class="opportunity-image"
+              src="../images/basketball.png"
+              alt="Students taking part in campus sports intramurals"
+            />
 
-    <button class="event-filter" data-filter="campus-life" type="button">
-        Campus Life
-    </button>
+            <div class="opportunity-body">
+              <span class="event-category">INTRAMURALS · TRYOUTS</span>
+              <h3>Basketball Tryouts</h3>
+              <p>
+                Bring your energy, teamwork, and school spirit. Join the
+                selection activities for the upcoming campus intramurals.
+              </p>
 
-    <button class="event-filter" data-filter="announcements" type="button">
-        Announcements
-    </button>
-</div>
+              <div class="opportunity-meta">
+                <span>📍 CHMSU Alijis Campus</span>
+                <span>🗓 October 19–22, 2026 listed in this project · Confirm with organizer</span>
+              </div>
 
+              <details class="event-more">
+                <summary>Tryout details and next steps</summary>
+                <div class="event-more-content">
+                  <p>
+                    The schedule shown here is unverified. Confirm dates, eligibility, and what to bring with the event organizer.
+                  </p>
+                  <p>
+                    <strong>Next step:</strong> Check with the organizer for any lineup announcement.
+                  </p>
 
-<div class="event-cards">
-    <article class="event-info-card" data-category="sports">
-        <span class="event-info-icon">🏀</span>
-        <span class="event-category">SPORTS</span>
-        <h3>Sports Competitions</h3>
-        <p>
-            Cheer for your team and enjoy exciting sports
-            competitions throughout intramurals.
-        </p>
-
-        <details class="event-more">
-            <summary>View details</summary>
-            <div class="event-more-content">
-                <p>
-                    Intramurals can bring students together through
-                    friendly competition and school spirit.
-                </p>
-                <p><strong>When:</strong> Last week of October 2026, planned</p>
-                <p><strong>Schedule:</strong> To be announced</p>
+                  <p class="scon-note"><strong>Next step:</strong> Confirm the schedule, availability, and sign-up process with the event organizer. This demo does not accept registrations.</p>
+                </div>
+              </details>
             </div>
-        </details>
+          </article>
 
-        <small>Schedule to be announced</small>
-    </article>
+          <article
+            class="event-info-card opportunity-card"
+            id="tryout-volleyball"
+            data-category="sports"
+          >
+            <img
+              class="opportunity-image"
+              src="../images/volleyball.png"
+              alt="Volleyball players preparing for a campus match"
+            />
 
-    <article class="event-info-card" data-category="campus-life">
-        <span class="event-info-icon">🎉</span>
-        <span class="event-category">CAMPUS LIFE</span>
-        <h3>School Spirit &amp; Activities</h3>
-        <p>
-            Celebrate campus pride, support your fellow students,
-            and enjoy the intramurals atmosphere.
-        </p>
+            <div class="opportunity-body">
+              <span class="event-category">INTRAMURALS · TRYOUTS</span>
+              <h3>Volleyball Tryouts</h3>
+              <p>
+                Show your court awareness, communication, and teamwork as you
+                work toward representing your department.
+              </p>
 
-        <details class="event-more">
-            <summary>View details</summary>
-            <div class="event-more-content">
-                <p>
-                    Stay tuned for campus activities and celebrations
-                    planned as part of the intramurals.
-                </p>
-                <p><strong>Location:</strong> CHMSU Campus</p>
-                <p><strong>Activities:</strong> Official details pending</p>
+              <div class="opportunity-meta">
+                <span>📍 CHMSU Alijis Campus</span>
+                <span>🗓 October 19–22, 2026 listed in this project · Confirm with organizer</span>
+              </div>
+
+              <details class="event-more">
+                <summary>Tryout details and next steps</summary>
+                <div class="event-more-content">
+                  <p>
+                    The schedule shown here is unverified. Confirm dates, eligibility, and what to bring with the event organizer.
+                  </p>
+                  <p>
+                    <strong>Next step:</strong> Check with the organizer for any lineup announcement.
+                  </p>
+
+                  <p class="scon-note"><strong>Next step:</strong> Confirm the schedule, availability, and sign-up process with the event organizer. This demo does not accept registrations.</p>
+                </div>
+              </details>
             </div>
-        </details>
+          </article>
 
-        <small>Details to be announced</small>
-    </article>
+          <article
+            class="event-info-card opportunity-card"
+            id="audition-cavocals"
+            data-category="arts"
+          >
+            <img
+              class="opportunity-image"
+              src="../images/cavocals.png"
+              alt="CaVocals student vocal performers"
+            />
 
-    <article class="event-info-card" data-category="announcements">
-        <span class="event-info-icon">📢</span>
-        <span class="event-category">ANNOUNCEMENTS</span>
-        <h3>Official Event Updates</h3>
-        <p>
-            Check SCon for announcements about schedules,
-            activities, and intramurals information.
-        </p>
+            <div class="opportunity-body">
+              <span class="event-category">ARTS & CULTURE · AUDITIONS</span>
+              <h3>CaVocals Auditions</h3>
+              <p>
+                Love to sing? Explore an opportunity to share your voice,
+                develop your performance skills, and join a campus vocal
+                community.
+              </p>
 
-        <details class="event-more">
-            <summary>View details</summary>
-            <div class="event-more-content">
-                <p>
-                    Check this section for future updates when
-                    official event information becomes available.
-                </p>
-                <p><strong>Exact dates:</strong> Not yet confirmed here</p>
-                <p><strong>Source:</strong> Official campus announcements</p>
+              <div class="opportunity-meta">
+                <span>🎤 Vocal performance</span>
+                <span>🗓 October 24, 2026</span>
+              </div>
+
+              <details class="event-more">
+                <summary>Audition details and next steps</summary>
+                <div class="event-more-content">
+                  <p>
+                    The schedule shown here is unverified. Confirm the audition date, eligibility, and preparation details with the CaVocals organizer.
+                  </p>
+                  <p>
+                    <strong>Who can join:</strong> Students interested in
+                    singing and performance
+                  </p>
+
+                  <p class="scon-note"><strong>Next step:</strong> Confirm the schedule, availability, and sign-up process with the event organizer. This demo does not accept registrations.</p>
+                </div>
+              </details>
             </div>
-        </details>
+          </article>
 
-        <small>Updates coming soon</small>
-    </article>
-</div>
+          <article class="event-info-card opportunity-card" data-category="student-life">
+            <img
+              class="opportunity-image"
+              src="../images/photography.png"
+              alt="Students collaborating on creative campus projects"
+            />
 
+            <div class="opportunity-body">
+              <span class="event-category">STUDENT LIFE · VOLUNTEERS</span>
+              <h3>Campus Creatives & Event Volunteers</h3>
+              <p>
+                Help bring campus activities to life through photography,
+                posters, event support, documentation, and social media content.
+              </p>
+
+              <div class="opportunity-meta">
+                <span>📸 Creative and event support</span>
+                <span>🗓 Opportunities posted throughout the term</span>
+              </div>
+
+              <details class="event-more">
+                <summary>How to take part</summary>
+                <div class="event-more-content">
+                  <p>
+                    Students interested in design, photography, writing, or
+                    event coordination can watch for calls from campus
+                    organizations.
+                  </p>
+                  <p>
+                    <strong>Useful skills:</strong> Creativity, reliability,
+                    teamwork
+                  </p>
+                  <p>
+                    <strong>Next step:</strong> Explore Organizations to find
+                    groups that need your skills.
+                  </p>
+                </div>
+              </details>
+
+              <a class="opportunity-link" href="organizations.html">
+                Explore organizations →
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="event-search-empty" id="event-search-empty" hidden>
+          No events or opportunities match that search. Try “basketball”,
+          “volleyball”, “singing”, or “volunteer”.
+        </p>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="home.html" class="footer-logo">SCon<span>.</span></a>
+          <p>
+            Students Connect — your campus community, all in one place. Discover
+            events, connect with organizations, and celebrate student
+            achievements.
+          </p>
+          <span class="footer-tagline">Discover. Connect. Participate.</span>
+        </div>
+
+        <div class="footer-links"><h3>Explore</h3><a href="home.html">Home</a><a href="discover.html">Discover</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="tryouts-auditions.html">Tryouts &amp; Auditions</a><a href="campus-calendar.html">Campus Calendar</a><a href="about.html">About SCon</a></div>
+
+        <div class="footer-links"><h3>Community</h3><a href="organizations.html">Organizations</a><a href="achievements.html">Achievements</a><a href="profile.html">My Profile</a><a href="saved-posts.html">Saved Posts</a><a href="settings.html">Settings</a><a href="help-support.html">Help &amp; Support</a><a href="community-guidelines.html">Community Guidelines</a><a href="guest.html">Sign Out / Guest</a></div>
+
+        <div class="footer-message">
+          <span class="footer-message-icon" aria-hidden="true">✦</span>
+          <h3>Your campus story starts here.</h3>
+          <p>Be part of the community. Find your place at CHMSU.</p>
+          <a href="discover.html" class="footer-cta">
+            Discover SCon <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SCon — Students Connect.</p>
+        <p>Made for the campus community.</p>
+      </div>
+    </footer>
   </body>
 </html>

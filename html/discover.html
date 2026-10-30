@@ -16,6 +16,7 @@
     <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/discover.css">
+    <link rel="stylesheet" href="../css/pages.css" />
     <script src="../js/script.js" defer></script>
   </head>
 
@@ -31,62 +32,402 @@
 
         <div class="nav-links">
           <a href="home.html">Home</a>
-          <a href="discover.html">Discover</a>
+          <a href="discover.html" aria-current="page">Discover</a>
           <a href="events.html">Events</a>
           <a href="organizations.html">Organizations</a>
           <a href="achievements.html">Achievements</a>
         </div>
-      </nav>
+              <div class="navbar-actions">
+          <div class="account-menu-wrap">
+            <button
+              class="account-menu-toggle"
+              type="button"
+              aria-label="Open account menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="account-menu"
+            >
+              <img src="../images/SCon Students Connect Logo.png" alt="" />
+              <span class="account-menu-label">Account</span>
+              <span class="account-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <div class="account-menu-profile">
+                <img src="../images/SCon Students Connect Logo.png" alt="" />
+                <span><strong>SCon Account</strong><small>Local demo profile</small></span>
+              </div>
+              <a href="profile.html" role="menuitem">My Profile</a>
+              <a href="settings.html" role="menuitem">Settings</a>
+              <a href="saved-posts.html" role="menuitem">Saved Posts</a>
+              <a href="help-support.html" role="menuitem">Help &amp; Support</a>
+              <div class="account-menu-divider" role="separator"></div>
+              <a href="guest.html" role="menuitem">Sign Out / Guest</a>
+            </div>
+          </div>
+        </div>      </nav>
     </header>
 
-
-<main>
+<main class="discover-page">
     <section class="discover-hero">
-        <span class="discover-label">EXPLORE YOUR CAMPUS</span>
-
-        <h1>Discover Your Community</h1>
-
-        <p>
-            Find student organizations, explore campus activities,
-            and discover new ways to get involved at CHMSU.
-        </p>
+        <span class="discover-label">YOUR CAMPUS COMMUNITY</span>
+        <h1>Discover what’s happening.</h1>
+        <p>Campus events, organizations, announcements, and student achievements—all in one place.</p>
     </section>
 
+    <section class="discover-search-section" aria-label="Search campus updates">
+        <label class="feature-search discover-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="discover-search" type="search" placeholder="Search events, organizations, or achievements..." aria-label="Search events, organizations, or achievements" />
+        </label>
+        <p class="feature-hint">Search a name or activity, then open the exact page.</p>
+        <div id="discover-search-results" class="discover-search-results" aria-live="polite" hidden></div>
+    </section>
 
-<section class="discover-categories">
-    <h2>Explore SCon</h2>
-    <p class="discover-intro">
-        Find your place in the campus community.
-    </p>
+    <section class="discover-feed" aria-labelledby="discover-feed-heading">
+        <div class="discover-feed-heading">
+            <span class="discover-label">CAMPUS FEED</span>
+            <h2 id="discover-feed-heading">The latest from campus</h2>
+            <p>Browse updates and follow each one to its event, organization, or achievement.</p>
+        </div>
 
-    <div class="discover-cards">
+        <div class="discover-feed-layout">
+        <div class="discover-post-list">
+            <article class="discover-post" id="post-intramurals-tryouts" data-post-id="discover-intramurals-tryouts">
+                <div class="discover-post-header">
+                    <img src="../images/sports_affairs.png" alt="" />
+                    <div>
+                        <strong>CHMSU Sports Affairs</strong>
+                        <span>Tryout information · Schedule to confirm</span>
+                    </div>
+                    <span class="discover-post-type">TRYOUTS</span>
+                </div>
+                <div class="discover-post-copy">
+                    <h3>Intramurals tryout information</h3>
+                    <p>
+                        This project lists basketball and volleyball tryout details. Confirm current availability, dates, and sign-up instructions with the event organizer before attending.
+                    </p>
+                </div>
+                <img
+                    class="discover-post-image"
+                    src="../images/intramurals.png"
+                    alt="Students taking part in campus intramurals"
+                />
+                <div class="discover-post-links">
+                    <a href="events.html#tryout-basketball">
+                        Basketball tryout details <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="events.html#tryout-volleyball">
+                        Volleyball tryout details <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="events.html#event-intramurals">
+                        Intramurals · date to confirm <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="discover-social" data-post-id="discover-intramurals-tryouts" data-base-likes="24">
+                    <div class="discover-social-summary">
+                        <span class="discover-like-count">24 likes</span>
+                        <button type="button" class="discover-comment-count" data-discover-comment-toggle aria-expanded="false">
+                            2 comments
+                        </button>
+                    </div>
+                    <div class="discover-social-actions">
+                        <button type="button" class="discover-social-action discover-like-action" aria-pressed="false">
+                            <span aria-hidden="true">♡</span> Like
+                        </button>
+                        <button type="button" class="discover-social-action" data-discover-comment-toggle aria-expanded="false">
+                            <span aria-hidden="true">▢</span> Comment
+                        </button>
+                        <button type="button" class="discover-social-action discover-share-action">
+                            <span aria-hidden="true">↗</span> Share
+                        </button>
+                    </div>
+                    <div class="discover-comments" hidden>
+                        <div class="discover-comment-list" aria-live="polite"></div>
+                        <form class="discover-comment-form">
+                            <label class="visually-hidden" for="discover-comment-tryouts">Write a comment</label>
+                            <input id="discover-comment-tryouts" type="text" maxlength="240" placeholder="Write a comment…" required />
+                            <button type="submit">Post</button>
+                        </form>
+                        <p class="discover-share-status" role="status" aria-live="polite"></p>
+                    </div>
+                </div>
+            </article>
 
-        <a href="organizations.html" class="discover-card">
-            <span class="discover-icon">👥</span>
-            <h3>Student Organizations</h3>
-            <p>Discover student groups, campus clubs, and communities.</p>
-            <span class="discover-link">Explore Organizations →</span>
-        </a>
+            <article class="discover-post" id="post-cavocals-auditions" data-post-id="discover-cavocals-auditions">
+                <div class="discover-post-header">
+                    <img src="../images/cavocals.png" alt="" />
+                    <div>
+                        <strong>CaVocals</strong>
+                        <span>Audition information · Schedule to confirm</span>
+                    </div>
+                    <span class="discover-post-type">AUDITIONS</span>
+                </div>
+                <div class="discover-post-copy">
+                    <h3>CaVocals is welcoming new voices</h3>
+                    <p>
+                        Students interested in singing can review the project details, then confirm the audition schedule and participation steps with CaVocals.
+                    </p>
+                </div>
+                <img
+                    class="discover-post-image"
+                    src="../images/cavocals.png"
+                    alt="CaVocals student performers"
+                />
+                <div class="discover-post-links">
+                    <a href="events.html#audition-cavocals">
+                        Audition Now <span aria-hidden="true">↗</span>
+                    </a>
+                    <a href="organizations.html#org-cavocals">
+                        Visit CaVocals <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="discover-social" data-post-id="discover-cavocals-auditions" data-base-likes="18">
+                    <div class="discover-social-summary">
+                        <span class="discover-like-count">18 likes</span>
+                        <button type="button" class="discover-comment-count" data-discover-comment-toggle aria-expanded="false">
+                            3 comments
+                        </button>
+                    </div>
+                    <div class="discover-social-actions">
+                        <button type="button" class="discover-social-action discover-like-action" aria-pressed="false">
+                            <span aria-hidden="true">♡</span> Like
+                        </button>
+                        <button type="button" class="discover-social-action" data-discover-comment-toggle aria-expanded="false">
+                            <span aria-hidden="true">▢</span> Comment
+                        </button>
+                        <button type="button" class="discover-social-action discover-share-action">
+                            <span aria-hidden="true">↗</span> Share
+                        </button>
+                    </div>
+                    <div class="discover-comments" hidden>
+                        <div class="discover-comment-list" aria-live="polite"></div>
+                        <form class="discover-comment-form">
+                            <label class="visually-hidden" for="discover-comment-cavocals">Write a comment</label>
+                            <input id="discover-comment-cavocals" type="text" maxlength="240" placeholder="Write a comment…" required />
+                            <button type="submit">Post</button>
+                        </form>
+                        <p class="discover-share-status" role="status" aria-live="polite"></p>
+                    </div>
+                </div>
+            </article>
 
-        <a href="events.html" class="discover-card">
-            <span class="discover-icon">📅</span>
-            <h3>Campus Events</h3>
-            <p>Find activities, celebrations, and upcoming campus events.</p>
-            <span class="discover-link">Explore Events →</span>
-        </a>
+            <article class="discover-post" id="post-tryout-lineup" data-post-id="discover-tryout-lineup">
+                <div class="discover-post-header">
+                    <img src="../images/sports_affairs.png" alt="" />
+                    <div>
+                        <strong>CHMSU Sports Affairs</strong>
+                        <span>Campus information · Check with organizer</span>
+                    </div>
+                    <span class="discover-post-type">ANNOUNCEMENT</span>
+                </div>
+                <div class="discover-post-copy">
+                    <h3>Intramurals tryout lineup update</h3>
+                    <p>
+                        Check with the event organizer for confirmed lineup updates and where they will be posted.
+                    </p>
+                </div>
+                <div class="discover-post-links">
+                    <a href="events.html#upcoming-events">
+                        Open Events page <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="discover-social" data-post-id="discover-tryout-lineup" data-base-likes="31">
+                    <div class="discover-social-summary">
+                        <span class="discover-like-count">31 likes</span>
+                        <button type="button" class="discover-comment-count" data-discover-comment-toggle aria-expanded="false">
+                            4 comments
+                        </button>
+                    </div>
+                    <div class="discover-social-actions">
+                        <button type="button" class="discover-social-action discover-like-action" aria-pressed="false">
+                            <span aria-hidden="true">♡</span> Like
+                        </button>
+                        <button type="button" class="discover-social-action" data-discover-comment-toggle aria-expanded="false">
+                            <span aria-hidden="true">▢</span> Comment
+                        </button>
+                        <button type="button" class="discover-social-action discover-share-action">
+                            <span aria-hidden="true">↗</span> Share
+                        </button>
+                    </div>
+                    <div class="discover-comments" hidden>
+                        <div class="discover-comment-list" aria-live="polite"></div>
+                        <form class="discover-comment-form">
+                            <label class="visually-hidden" for="discover-comment-lineup">Write a comment</label>
+                            <input id="discover-comment-lineup" type="text" maxlength="240" placeholder="Write a comment…" required />
+                            <button type="submit">Post</button>
+                        </form>
+                        <p class="discover-share-status" role="status" aria-live="polite"></p>
+                    </div>
+                </div>
+            </article>
 
-        <a href="achievements.html" class="discover-card">
-            <span class="discover-icon">🏆</span>
-            <h3>Student Achievements</h3>
-            <p>Celebrate student accomplishments and campus victories.</p>
-            <span class="discover-link">View Achievements →</span>
-        </a>
+            <section class="discover-feed-section" aria-labelledby="discover-organizations-heading">
+                <div class="discover-feed-section-heading">
+                    <div>
+                        <span class="discover-section-label">FIND YOUR COMMUNITY</span>
+                        <h2 id="discover-organizations-heading">Organizations</h2>
+                    </div>
+                    <a href="organizations.html">
+                        All organizations <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <div class="discover-organization-list">
+                    <a class="discover-organization" href="organizations.html#org-pythons">
+                        <img src="../images/pythons.png" alt="" />
+                        <span>
+                            <strong>CHMSU Python Esports Club</strong>
+                            <small>Gaming and competition</small>
+                        </span>
+                        <span class="discover-tag">ESPORTS</span>
+                    </a>
+                    <a class="discover-organization" href="organizations.html#org-cusg">
+                        <img src="../images/CUSG.png" alt="" />
+                        <span>
+                            <strong>CHMSU University Student Government - CUSG</strong>
+                            <small>Student leadership and campus engagement</small>
+                        </span>
+                        <span class="discover-tag">STUDENT GOVERNMENT</span>
+                    </a>
+                    <a class="discover-organization" href="organizations.html#org-cavocals">
+                        <img src="../images/cavocals.png" alt="" />
+                        <span>
+                            <strong>CaVocals</strong>
+                            <small>Music and student performance</small>
+                        </span>
+                        <span class="discover-tag">PERFORMING ARTS</span>
+                    </a>
+                </div>
+            </section>
 
-    </div>
-</section>
-
-
+            <section class="discover-feed-section" aria-labelledby="discover-achievements-heading">
+                <div class="discover-feed-section-heading">
+                    <div>
+                        <span class="discover-section-label">CAMPUS SPOTLIGHT</span>
+                        <h2 id="discover-achievements-heading">Student achievements</h2>
+                    </div>
+                    <a href="achievements.html">
+                        All achievements <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+                <a class="discover-achievement-post" href="achievements.html#achievement-scon-project">
+                    <img src="../images/scon_team.png" alt="Students Connect project team" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">THE TECHNOPACER · STUDENT PROJECT</span>
+                        <strong>Students Connect (SCon)</strong>
+                        <span>Meet the student team behind a campus community website for discovering events, organizations, and student achievements.</span>
+                        <span class="discover-achievement-link">Open SCon achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+                <a class="discover-achievement-post" href="achievements.html#achievement-jersli-it-competition">
+                    <img src="../images/jersli_it_competition.png" alt="Jersli John G. Caba IT competition recognition" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">THE TECHNOPACER · COMPETITION</span>
+                        <strong>International IT Competition</strong>
+                        <span>Read about Jersli John G. Caba’s competition recognition and achievement highlights.</span>
+                        <span class="discover-achievement-link">Open achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+                <a class="discover-achievement-post" href="achievements.html#achievement-arron-mvp">
+                    <img src="../images/arron_mvp.png" alt="Arron R. Sartorio basketball MVP" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">CHMSU SPORTS AFFAIRS · BASKETBALL</span>
+                        <strong>Basketball Intramurals MVP</strong>
+                        <span>Explore the recognition and highlights from the campus basketball intramurals.</span>
+                        <span class="discover-achievement-link">Open achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+                <a class="discover-achievement-post" href="achievements.html#achievement-ferlouie-ml">
+                    <img src="../images/ferlouie_ml.png" alt="Ferlouie S. Baylon Mobile Legends MVP" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">CHMSU PYTHON ESPORTS CLUB · ESPORTS</span>
+                        <strong>Mobile Legends Intramurals MVP</strong>
+                        <span>Explore the game awareness, teamwork, and match highlights behind the recognition.</span>
+                        <span class="discover-achievement-link">Open achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+                <a class="discover-achievement-post" href="achievements.html#achievement-jersli-volleyball">
+                    <img src="../images/jersli_vb.png" alt="Jersli John G. Caba volleyball MVP" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">CHMSU SPORTS AFFAIRS · VOLLEYBALL</span>
+                        <strong>Volleyball Intramurals MVP</strong>
+                        <span>Read about the recognition for strong attacks, dependable defense, and teamwork.</span>
+                        <span class="discover-achievement-link">Open achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+                <a class="discover-achievement-post" href="achievements.html#achievement-ferlouie-academic">
+                    <img src="../images/ferlouie_academic.png" alt="Ferlouie S. Baylon academic recognition" />
+                    <span class="discover-achievement-copy">
+                        <span class="discover-section-label">CUSG · ACADEMIC RECOGNITION</span>
+                        <strong>Academic Excellence</strong>
+                        <span>See the highlights celebrating steady preparation, participation, and commitment to learning.</span>
+                        <span class="discover-achievement-link">Open achievement <span aria-hidden="true">↗</span></span>
+                    </span>
+                </a>
+            </section>
+        </div>
+        <aside class="discover-sidebar" aria-label="Campus dates and quick links">
+            <section class="discover-sidebar-card">
+                <span class="discover-section-label">COMING UP</span>
+                <h2>Dates to keep close</h2>
+                <div class="discover-date-list">
+                    <a class="discover-date-link" href="events.html#tryout-basketball">
+                        <time><span>DATE</span><strong>Check</strong></time>
+                        <span><strong>Intramurals tryouts</strong><small>Basketball and volleyball</small></span>
+                        <span class="discover-date-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="discover-date-link" href="events.html#upcoming-events">
+                        <time><span>DATE</span><strong>Check</strong></time>
+                        <span><strong>Tryout lineup</strong><small>Posted at 5:00 PM</small></span>
+                        <span class="discover-date-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="discover-date-link" href="events.html#audition-cavocals">
+                        <time><span>DATE</span><strong>Check</strong></time>
+                        <span><strong>CaVocals auditions</strong><small>Open to interested students</small></span>
+                        <span class="discover-date-arrow" aria-hidden="true">↗</span>
+                    </a>
+                    <a class="discover-date-link" href="events.html#event-intramurals">
+                        <time><span>DATE</span><strong>Check</strong></time>
+                        <span><strong>CHMSU Intramurals</strong><small>Sports and campus spirit</small></span>
+                        <span class="discover-date-arrow" aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </section>
+            <section class="discover-sidebar-card discover-quick-links">
+                <span class="discover-section-label">QUICK ACCESS</span>
+                <h2>Find your next step</h2>
+                <a href="events.html"><span aria-hidden="true">▦</span> Browse campus events</a>
+                <a href="organizations.html"><span aria-hidden="true">◉</span> Meet organizations</a>
+                <a href="achievements.html"><span aria-hidden="true">✦</span> Explore achievements</a>
+            </section>
+        </aside>
+        </div>
+    </section>
 </main>
 
-  </body>
+      <footer class="site-footer">
+        <div class="footer-main">
+            <div class="footer-brand">
+                <a href="home.html" class="footer-logo">SCon<span>.</span></a>
+                <p>Students Connect — your campus community, all in one place. Discover events, connect with organizations, and celebrate student achievements.</p>
+                <span class="footer-tagline">Discover. Connect. Participate.</span>
+            </div>
+
+            <div class="footer-links"><h3>Explore</h3><a href="home.html">Home</a><a href="discover.html">Discover</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="tryouts-auditions.html">Tryouts &amp; Auditions</a><a href="campus-calendar.html">Campus Calendar</a><a href="about.html">About SCon</a></div>
+
+        <div class="footer-links"><h3>Community</h3><a href="organizations.html">Organizations</a><a href="achievements.html">Achievements</a><a href="profile.html">My Profile</a><a href="saved-posts.html">Saved Posts</a><a href="settings.html">Settings</a><a href="help-support.html">Help &amp; Support</a><a href="community-guidelines.html">Community Guidelines</a><a href="guest.html">Sign Out / Guest</a></div>
+
+            <div class="footer-message">
+                <span class="footer-message-icon" aria-hidden="true">✦</span>
+                <h3>Your campus story starts here.</h3>
+                <p>Be part of the community. Find your place at CHMSU.</p>
+                <a href="discover.html" class="footer-cta">Discover SCon <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+      <div class="footer-bottom">
+            <p>© 2026 SCon — Students Connect.</p>
+            <p>Made for the campus community.</p>
+        </div>
+    </footer>
+
+</body>
 </html>

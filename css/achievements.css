@@ -1,0 +1,1021 @@
+.achievements-page {
+    min-height: 100vh;
+    padding-bottom: 70px;
+    background: #f4f7fb;
+    color: #102a4a;
+}
+
+.achievements-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 76px 8% 68px;
+    background: linear-gradient( 90deg, rgba(16, 42, 74, 0.92) 0%, rgba(16, 42, 74, 0.78) 55%, rgba(16, 42, 74, 0.45) 100% ), url("../images/discover_card_3.png");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+
+.achievements-label {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #bfdbfe;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.achievements-hero h1 {
+    max-width: 780px;
+    margin-top: 22px;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 800;
+    letter-spacing: -1.8px;
+    line-height: 1.12;
+}
+
+.achievements-hero h1 span {
+    color: #93c5fd;
+}
+
+.achievements-hero > p {
+    max-width: 650px;
+    margin-top: 18px;
+    color: #dbeafe;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.recognition-section {
+    padding: 58px 8% 0;
+}
+
+.recognition-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.section-label {
+    color: #3478c8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.recognition-heading h2 {
+    margin-top: 9px;
+    color: #102a4a;
+    font-size: clamp(25px, 3vw, 34px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+
+.recognition-heading p {
+    margin-top: 9px;
+    color: #667b93;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.recognition-icon {
+    display: block;
+    flex-shrink: 0;
+    width: 58px;
+    height: 58px;
+    padding: 8px;
+    border: 1px solid #dce9f8;
+    border-radius: 18px;
+    background: #eaf3ff;
+    object-fit: contain;
+}
+
+@media (max-width: 650px) {
+    .recognition-icon {
+        width: 46px;
+        height: 46px;
+        padding: 6px;
+        border-radius: 14px;
+    }
+}
+
+.recognition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+    gap: 24px;
+}
+
+.recognition-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #e1e9f2;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(16, 42, 74, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.recognition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 34px rgba(16, 42, 74, 0.12);
+}
+
+.recognition-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: #dce8f5;
+}
+
+.recognition-card .recognition-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    filter: blur(2px) !important;
+    transform: scale(1.04);
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.recognition-card:hover .recognition-image img, .recognition-card:focus-within .recognition-image img {
+    filter: blur(0) !important;
+    transform: scale(1);
+}
+
+.recognition-card.team-recognition .recognition-image img {
+    filter: blur(2px) !important;
+    transform: scale(1.04);
+}
+
+.recognition-card.team-recognition:hover .recognition-image img, .recognition-card.team-recognition:focus-within .recognition-image img {
+    filter: blur(0) !important;
+    transform: scale(1);
+}
+
+.recognition-image::after {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 28, 50, 0.02), rgba(10, 28, 50, 0.28));
+    content: "";
+    pointer-events: none;
+}
+
+.recognition-badge {
+    position: absolute;
+    z-index: 1;
+    top: 15px;
+    left: 15px;
+    padding: 9px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    background: rgba(16, 42, 74, 0.88);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    backdrop-filter: blur(8px);
+}
+
+.recognition-content {
+    padding: 23px;
+}
+
+.recognition-category {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 7px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.sports-category {
+    background: #e8f2ff;
+    color: #245c91;
+}
+
+.esports-category {
+    background: #eeeaff;
+    color: #6246a5;
+}
+
+.volleyball-category {
+    background: #e3f8ee;
+    color: #16734b;
+}
+
+.academic-category {
+    background: #e3f8ee;
+    color: #16734b;
+}
+
+.competition-category {
+    background: #fff0df;
+    color: #a65b12;
+}
+
+.team-category {
+    background: #f4e8ff;
+    color: #7842a5;
+}
+
+.recognition-content h3 {
+    margin-top: 15px;
+    color: #102a4a;
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.awardee-name {
+    margin-top: 12px;
+    color: #245c91;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.awardee-course {
+    margin-top: 5px;
+    color: #8493a6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.recognition-description {
+    margin-top: 16px;
+    color: #5d7188;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.recognition-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #edf1f6;
+    color: #6d8096;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.recognition-more {
+    display: none;
+    margin-top: 0;
+    padding: 0 15px;
+    overflow: hidden;
+    border-left: 3px solid #3478c8;
+    border-radius: 8px;
+    background: #f4f8ff;
+    opacity: 0;
+    transition: padding 0.3s ease, margin 0.3s ease, opacity 0.3s ease;
+}
+
+.recognition-card.expanded .recognition-more {
+    display: block;
+    margin-top: 18px;
+    padding: 16px;
+    opacity: 1;
+}
+
+.recognition-more h4 {
+    margin-bottom: 13px;
+    color: #102a4a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.achievement-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.achievement-stats div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px 7px;
+    border: 1px solid #e1ebfa;
+    border-radius: 8px;
+    background: #fff;
+}
+
+.achievement-stats strong {
+    color: #245c91;
+    font-size: 12px;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.achievement-stats span {
+    color: #6d8096;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+.recognition-more > p {
+    color: #526780;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.recognition-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 17px;
+    padding: 11px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: #eaf3ff;
+    color: #245c91;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.recognition-toggle:hover {
+    background: #d5e7ff;
+    color: #102a4a;
+}
+
+.recognition-toggle:focus-visible {
+    outline: 3px solid #7db7ff;
+    outline-offset: 3px;
+}
+
+.recognition-toggle span {
+    font-size: 16px;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 13px;
+}
+
+.team-members span {
+    padding: 7px 9px;
+    border: 1px solid #e2eaf4;
+    border-radius: 7px;
+    background: #f7faff;
+    color: #50677f;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.recognition-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin: 65px 8% 0;
+    padding: 30px;
+    border: 1px solid #dce9f8;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #fff 0%, #edf5ff 100%);
+}
+
+.recognition-cta > span {
+    color: #3478c8;
+    font-size: 30px;
+}
+
+.recognition-cta h2 {
+    color: #102a4a;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.recognition-cta p {
+    margin-top: 8px;
+    color: #667b93;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.recognition-cta-link {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border-radius: 9px;
+    background: #245c91;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.recognition-cta-link:hover {
+    transform: translateY(-2px);
+    background: #102a4a;
+}
+
+@media (max-width: 1050px) {
+    .recognition-section {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+
+    .recognition-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .recognition-cta {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .recognition-image {
+        height: 230px;
+    }
+}
+
+@media (max-width: 650px) {
+    .achievements-hero {
+        padding: 55px 6% 48px;
+    }
+
+    .achievements-hero h1 {
+        letter-spacing: -1px;
+    }
+
+    .achievements-hero > p {
+        font-size: 14px;
+    }
+
+    .recognition-section {
+        padding: 42px 6% 0;
+    }
+
+    .recognition-heading {
+        align-items: flex-start;
+    }
+
+    .recognition-icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 14px;
+        font-size: 21px;
+    }
+
+    .recognition-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .recognition-image {
+        height: 245px;
+    }
+
+    .recognition-content {
+        padding: 20px;
+    }
+
+    .recognition-cta {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 45px 6% 0;
+        padding: 23px;
+    }
+
+    .recognition-cta h2 {
+        font-size: 18px;
+    }
+
+    .achievement-stats {
+        gap: 6px;
+    }
+
+    .achievement-stats div {
+        padding: 9px 6px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .recognition-card, .recognition-image img, .recognition-toggle, .recognition-cta-link {
+        transition: none;
+    }
+}
+
+body.achievement-modal-open {
+    overflow: hidden;
+}
+
+.achievement-modal-backdrop[hidden], .achievement-modal-media [hidden] {
+    display: none;
+}
+
+.achievement-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    padding: 28px;
+    background: rgba(7, 18, 33, 0.7);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    animation: achievement-backdrop-in 0.2s ease both;
+}
+
+.achievement-modal {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(350px, 0.85fr);
+    width: min(1120px, 100%);
+    max-height: min(820px, calc(100vh - 56px));
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+    animation: achievement-modal-in 0.24s ease both;
+}
+
+.achievement-modal:focus {
+    outline: none;
+}
+
+.achievement-modal-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.52);
+    border-radius: 50%;
+    background: rgba(11, 31, 56, 0.72);
+    color: #fff;
+    font: 400 30px/1 Inter, sans-serif;
+    cursor: pointer;
+    transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.achievement-modal-close:hover {
+    transform: scale(1.06);
+    background: #102a4a;
+}
+
+.achievement-modal-close:focus-visible, .achievement-modal button:focus-visible, .achievement-comment-form input:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+.achievement-modal-media {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: 28px;
+    background: radial-gradient(ellipse at 20% 20%, #294a70, #08182a 70%);
+}
+
+.achievement-modal-video, .achievement-gallery {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 150px);
+    aspect-ratio: 16 / 10;
+    border-radius: 12px;
+    background: #030a12;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.25);
+}
+
+.achievement-modal-video {
+    object-fit: contain;
+}
+
+.achievement-gallery {
+    position: relative;
+    overflow: hidden;
+    touch-action: pan-y;
+}
+
+.achievement-modal-still {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.achievement-gallery-arrow {
+    position: absolute;
+    top: 50%;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    transform: translateY(-50%);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 50%;
+    background: rgba(11, 31, 56, 0.75);
+    color: #fff;
+    font: 32px/1 Inter, sans-serif;
+    cursor: pointer;
+    transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.achievement-gallery-arrow:hover {
+    transform: translateY(-50%) scale(1.06);
+    background: #102a4a;
+}
+
+.achievement-gallery-previous {
+    left: 14px;
+}
+
+.achievement-gallery-next {
+    right: 14px;
+}
+
+.achievement-gallery-count {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    padding: 6px 9px;
+    border-radius: 20px;
+    background: rgba(11, 31, 56, 0.76);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.achievement-video-caption {
+    margin: 14px 0 0;
+    color: #c5d7ed;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.achievement-modal-details {
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 24px 24px 18px;
+    color: #102a4a;
+}
+
+.achievement-modal-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 46px 18px 0;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.achievement-modal-avatar {
+    width: 44px;
+    height: 44px;
+    flex: 0 0 44px;
+    padding: 3px;
+    border: 2px solid #dce9f8;
+    border-radius: 50%;
+    background: #fff;
+    object-fit: contain;
+}
+
+.achievement-modal-kicker {
+    display: block;
+    color: #102a4a;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.achievement-modal-byline {
+    margin: 4px 0 0;
+    color: #7b8ba0;
+    font-size: 11px;
+}
+
+.achievement-modal-copy {
+    padding: 18px 0;
+}
+
+.achievement-modal-category {
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 6px 9px;
+    border-radius: 6px;
+    background: #eaf3ff;
+    color: #245c91;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.achievement-modal-copy h2 {
+    margin: 0 0 7px;
+    color: #102a4a;
+    font-size: clamp(20px, 2.3vw, 27px);
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.achievement-modal-awardee {
+    margin: 0 0 12px;
+    color: #245c91;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.achievement-modal-copy > p:not(.achievement-modal-awardee) {
+    margin: 0;
+    color: #526780;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.achievement-modal-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+    margin-top: 15px;
+}
+
+.achievement-modal-highlights:empty {
+    display: none;
+}
+
+.achievement-modal-highlights > div {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 5px;
+    padding: 9px 8px;
+    border: 1px solid #e3ebf5;
+    border-radius: 8px;
+    background: #f8fbff;
+}
+
+.achievement-modal-highlights strong {
+    color: #245c91;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+}
+
+.achievement-modal-highlights span {
+    color: #6d8096;
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.achievement-social-summary {
+    display: flex;
+    justify-content: space-between;
+    padding: 13px 0;
+    border-top: 1px solid #edf1f6;
+    color: #6e7f93;
+    font-size: 11px;
+}
+
+.achievement-social-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2px 0;
+    border-top: 1px solid #edf1f6;
+    border-bottom: 1px solid #edf1f6;
+}
+
+.achievement-social-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 4px;
+    border: 0;
+    border-radius: 7px;
+    background: transparent;
+    color: #62758b;
+    font: 700 12px Inter, sans-serif;
+    cursor: pointer;
+}
+
+.achievement-social-actions button:hover {
+    background: #f1f6fc;
+    color: #245c91;
+}
+
+.achievement-social-actions button > span {
+    font-size: 17px;
+}
+
+.achievement-like-button.is-liked {
+    color: #1877f2;
+}
+
+.achievement-comments {
+    display: grid;
+    gap: 9px;
+    padding: 13px 0 8px;
+}
+
+.achievement-user-comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin: 0;
+}
+
+.achievement-comment-avatar {
+    display: grid;
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    place-items: center;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #1d4f83;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.achievement-comment-avatar[data-tone="1"] {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.achievement-comment-avatar[data-tone="2"] {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.achievement-comment-avatar[data-tone="3"] {
+    background: #f3e8ff;
+    color: #6b21a8;
+}
+
+.achievement-comment-bubble {
+    min-width: 0;
+    margin: 0;
+    padding: 9px 12px;
+    border-radius: 13px;
+    background: #f1f3f5;
+    color: #34465a;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.achievement-comment-bubble strong {
+    margin-right: 4px;
+    color: #102a4a;
+}
+
+.achievement-comment-form {
+    display: flex;
+    gap: 8px;
+    margin-top: auto;
+    padding-top: 8px;
+}
+
+.achievement-comment-form input {
+    min-width: 0;
+    flex: 1;
+    padding: 11px 14px;
+    border: 1px solid #dce5ef;
+    border-radius: 24px;
+    background: #f8fafc;
+    color: #102a4a;
+    font: 12px Inter, sans-serif;
+}
+
+.achievement-comment-form button {
+    padding: 0 16px;
+    border: 0;
+    border-radius: 22px;
+    background: #245c91;
+    color: #fff;
+    font: 700 12px Inter, sans-serif;
+    cursor: pointer;
+}
+
+.achievement-comment-form button:hover {
+    background: #102a4a;
+}
+
+.achievement-share-status {
+    min-height: 15px;
+    margin: 7px 0 0;
+    color: #3478c8;
+    font-size: 10px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+@keyframes achievement-backdrop-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes achievement-modal-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.985);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@media (max-width: 760px) {
+    .achievement-modal-backdrop {
+        padding: 12px;
+    }
+
+    .achievement-modal {
+        grid-template-columns: minmax(0, 1fr);
+        width: min(620px, 100%);
+        max-height: calc(100vh - 24px);
+        overflow-y: auto;
+    }
+
+    .achievement-modal-media {
+        padding: 12px;
+    }
+
+    .achievement-modal-video, .achievement-gallery {
+        max-height: 36vh;
+        aspect-ratio: 16 / 9;
+    }
+
+    .achievement-video-caption {
+        margin-top: 8px;
+        font-size: 10px;
+    }
+
+    .achievement-modal-details {
+        overflow: visible;
+        padding: 16px 18px 10px;
+    }
+
+    .achievement-modal-heading {
+        padding-bottom: 12px;
+    }
+
+    .achievement-modal-copy {
+        padding: 13px 0;
+    }
+}
+
+@media (max-width: 420px) {
+    .achievement-modal-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .achievement-social-actions button {
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .achievement-modal-backdrop, .achievement-modal {
+        animation: none;
+    }
+
+    .achievement-modal-close {
+        transition: none;
+    }
+}

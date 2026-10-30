@@ -1,219 +1,443 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SCon | Students Connect</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="../images/SV Favicon.png">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
     <script src="../js/script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <h2>
-                <a href="home.html" class="brand">
-                    <img src="../images/SV Favicon.png" alt="SCon logo">
-                    <span>SCon</span>
-                </a>
-            </h2>
-            <div class="nav-links">
-                <a href="home.html" aria-current="page">Home</a>
-                <a href="discover.html">Discover</a>
-                <a href="events.html">Events</a>
-                <a href="organizations.html">Organizations</a>
-                <a href="achievements.html">Achievements</a>
+      <nav class="navbar">
+        <h2>
+          <a href="home.html" class="brand">
+            <img src="../images/SV Favicon.png" alt="SCon logo" />
+            <span>SCon</span>
+          </a>
+        </h2>
+        <div class="nav-links">
+          <a href="home.html" aria-current="page">Home</a>
+          <a href="discover.html">Discover</a>
+          <a href="events.html">Events</a>
+          <a href="organizations.html">Organizations</a>
+          <a href="achievements.html">Achievements</a>
+        </div>
+        <div class="navbar-actions">
+          <div class="account-menu-wrap">
+            <button
+              class="account-menu-toggle"
+              type="button"
+              aria-label="Open account menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="account-menu"
+            >
+              <img src="../images/SCon Students Connect Logo.png" alt="" />
+              <span class="account-menu-label">Account</span>
+              <span class="account-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <div class="account-menu-profile">
+                <img src="../images/SCon Students Connect Logo.png" alt="" />
+                <span><strong>SCon Account</strong><small>Local demo profile</small></span>
+              </div>
+              <a href="profile.html" role="menuitem">My Profile</a>
+              <a href="settings.html" role="menuitem">Settings</a>
+              <a href="saved-posts.html" role="menuitem">Saved Posts</a>
+              <a href="help-support.html" role="menuitem">Help &amp; Support</a>
+              <div class="account-menu-divider" role="separator"></div>
+              <a href="guest.html" role="menuitem">Sign Out / Guest</a>
             </div>
-        </nav>
+          </div>
+        </div>
+      </nav>
     </header>
 
     <main>
-        <!-- 1. HERO -->
-        <section class="hero" id="home">
-            <div class="hero-background" aria-hidden="true"></div>
 
-            <div class="hero-content">
-                <span class="hero-badge">✦ YOUR CAMPUS, CONNECTED</span>
-                <h1>Your Campus.<br>Your Community.<br><span>Your Story.</span></h1>
-                <p>Discover opportunities, connect with student organizations, and celebrate the people who make campus life special.</p>
+      <section class="hero" id="home">
+        <div class="hero-background" aria-hidden="true"></div>
 
-                <div class="hero-actions">
-                    <a href="#explore" class="btn-primary">Explore Campus <span aria-hidden="true">↗</span></a>
-                    <a href="#updates" class="btn-secondary">Latest Updates</a>
-                </div>
+        <div class="hero-content">
+          <span class="hero-badge">✦ YOUR CAMPUS, CONNECTED</span>
+          <h1>
+            Your Campus.<br />Your Community.<br /><span>Your Story.</span>
+          </h1>
+          <p>
+            Campus information can be easy to miss when it is spread across
+            posts and pages. SCon brings events, student groups, and
+            achievements together so you can find where to take part and what is
+            happening at CHMSU.
+          </p>
 
-                <label class="hero-search">
-                    <span aria-hidden="true">⌕</span>
-                    <input type="search" id="update-search" placeholder="Search events, organizations, achievements..." aria-label="Search campus updates">
-                </label>
+          <div class="hero-actions">
+            <a href="#explore" class="btn-primary"
+              >Explore Campus <span aria-hidden="true">↗</span></a
+            >
+            <a href="#updates" class="btn-secondary">Latest Updates</a>
+          </div>
 
-                <div class="hero-note">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    Everything happening on campus, in one place.
-                </div>
+          <label class="hero-search">
+            <span aria-hidden="true">⌕</span>
+            <input
+              type="search"
+              id="update-search"
+              placeholder="Search events, organizations, achievements..."
+              aria-label="Search campus updates"
+            />
+          </label>
+
+          <div class="hero-note">
+            <span class="status-dot" aria-hidden="true"></span>
+            Everything happening on campus, in one place.
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-visual-frame">
+            <img src="../images/chmsu_logo.png" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-actions" id="explore">
+        <div class="quick-actions-heading">
+          <span class="section-eyebrow">YOUR CAMPUS, YOUR CHOICE</span>
+          <h2>Explore Your Campus</h2>
+          <p>
+            Find events, join organizations, and celebrate student achievements.
+          </p>
+        </div>
+
+        <div class="action-cards">
+          <a class="action-card events-action" href="events.html">
+            <img
+              class="action-card-image"
+              src="../images/event_chmsu.png"
+              alt="Students gathering on the CHMSU campus"
+            />
+            <div class="action-card-top">
+              <span class="action-icon" aria-hidden="true">📅</span>
+              <span class="action-number">01</span>
             </div>
+            <span class="action-label">STAY UPDATED</span>
+            <h3>Events</h3>
+            <p>Discover what's happening around campus.</p>
+            <span class="action-link"
+              >Explore events <span aria-hidden="true">↗</span></span
+            >
+          </a>
 
-            <div class="hero-visual" aria-hidden="true">
-                <div class="hero-visual-frame">
-                    <div class="hero-visual-overlay"></div>
-                    <div class="hero-visual-caption">
-                        <span class="hero-visual-dot"></span>
-                        <div>
-                            <strong>CHMSU Campus Life</strong>
-                            <small>Discover. Connect. Participate.</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual-accent"></div>
+          <a class="action-card organizations-action" href="organizations.html">
+            <img
+              class="action-card-image"
+              src="../images/organizations-banner.png"
+              alt="Student organizations at CHMSU"
+            />
+            <div class="action-card-top">
+              <span class="action-icon" aria-hidden="true">👥</span>
+              <span class="action-number">02</span>
             </div>
-        </section>
+            <span class="action-label">FIND YOUR PEOPLE</span>
+            <h3>Organizations</h3>
+            <p>Find clubs and connect with fellow students.</p>
+            <span class="action-link"
+              >Discover organizations <span aria-hidden="true">↗</span></span
+            >
+          </a>
 
-        <!-- 2. EXPLORE -->
-        <section class="quick-actions" id="explore">
-            <div class="quick-actions-heading">
-                <span class="section-eyebrow">YOUR CAMPUS, YOUR CHOICE</span>
-                <h2>Explore Your Campus</h2>
-                <p>Find events, join organizations, and celebrate student achievements.</p>
+          <a class="action-card achievements-action" href="achievements.html">
+            <img
+              class="action-card-image"
+              src="../images/discover_card_3.png"
+              alt="CHMSU student athlete recognized for achievement"
+            />
+            <div class="action-card-top">
+              <span class="action-icon" aria-hidden="true">🏆</span>
+              <span class="action-number">03</span>
             </div>
+            <span class="action-label">CELEBRATE SUCCESS</span>
+            <h3>Achievements</h3>
+            <p>Celebrate student milestones and campus victories.</p>
+            <span class="action-link"
+              >See achievements <span aria-hidden="true">↗</span></span
+            >
+          </a>
+        </div>
+      </section>
 
-            <div class="action-cards">
-                <a class="action-card events-action" href="events.html">
-                    <div class="action-card-top">
-                        <span class="action-icon" aria-hidden="true">📅</span>
-                        <span class="action-number">01</span>
-                    </div>
-                    <span class="action-label">STAY UPDATED</span>
-                    <h3>Events</h3>
-                    <p>Discover what's happening around campus.</p>
-                    <span class="action-link">Explore events <span aria-hidden="true">↗</span></span>
-                </a>
+      <section class="latest-updates" id="updates">
+        <div class="updates-heading">
+          <div>
+            <span class="section-eyebrow">WHAT'S HAPPENING</span>
+            <h2>Latest Campus Updates</h2>
+            <p class="updates-intro">
+              Stay connected with the latest news, events, and achievements from
+              your campus community.
+            </p>
+          </div>
+          <a href="events.html" class="updates-view-all"
+            >Explore events <span aria-hidden="true">↗</span></a
+          >
+        </div>
 
-                <a class="action-card organizations-action" href="organizations.html">
-                    <div class="action-card-top">
-                        <span class="action-icon" aria-hidden="true">👥</span>
-                        <span class="action-number">02</span>
-                    </div>
-                    <span class="action-label">FIND YOUR PEOPLE</span>
-                    <h3>Organizations</h3>
-                    <p>Find clubs and connect with fellow students.</p>
-                    <span class="action-link">Discover organizations <span aria-hidden="true">↗</span></span>
-                </a>
-
-                <a class="action-card achievements-action" href="achievements.html">
-                    <div class="action-card-top">
-                        <span class="action-icon" aria-hidden="true">🏆</span>
-                        <span class="action-number">03</span>
-                    </div>
-                    <span class="action-label">CELEBRATE SUCCESS</span>
-                    <h3>Achievements</h3>
-                    <p>Celebrate student milestones and campus victories.</p>
-                    <span class="action-link">See achievements <span aria-hidden="true">↗</span></span>
-                </a>
+        <div class="updates-list">
+          <article class="update-card" data-post-id="scon-spotlight">
+            <div class="post-author">
+              <img
+                class="post-avatar"
+                src="../images/technopacer.png"
+                alt="Technopacer"
+              />
+              <span class="post-author-details"
+                ><strong>Technopacer</strong
+                ><small>Project spotlight · Campus Journalism</small></span
+              >
+              <span class="post-visibility">Public</span>
             </div>
-        </section>
-
-        <!-- 3. LATEST UPDATES -->
-        <section class="latest-updates" id="updates">
-            <div class="updates-heading">
-                <div>
-                    <span class="section-eyebrow">WHAT'S HAPPENING</span>
-                    <h2>Latest Campus Updates</h2>
-                    <p class="updates-intro">Stay connected with the latest news, events, and achievements from your campus community.</p>
-                </div>
-                <a href="events.html" class="updates-view-all">Explore events <span aria-hidden="true">↗</span></a>
+            <img
+              class="update-card-image"
+              src="../images/scon_team.png"
+              alt="Arron, Jersli, and Ferlouie working together on SCon"
+            />
+            <div class="update-card-top">
+              <span class="update-category achievement-category"
+                >SCon PROJECT SPOTLIGHT</span
+              >
             </div>
-
-            <div class="updates-list">
-                <a class="update-card" href="events.html">
-                    <div class="update-card-top">
-                        <span class="update-category event-category">CAMPUS EVENTS</span>
-                        <span class="update-arrow" aria-hidden="true">↗</span>
-                    </div>
-                    <div class="update-symbol event-symbol" aria-hidden="true">📅</div>
-                    <h3>Discover Campus Events</h3>
-                    <p>Explore upcoming activities, campus programs, and opportunities to participate in student life.</p>
-                    <div class="update-card-footer">
-                        <span>Events &amp; Activities</span>
-                        <span class="update-read">Explore update <span aria-hidden="true">→</span></span>
-                    </div>
-                </a>
-
-                <a class="update-card" href="achievements.html">
-                    <div class="update-card-top">
-                        <span class="update-category achievement-category">STUDENT HIGHLIGHTS</span>
-                        <span class="update-arrow" aria-hidden="true">↗</span>
-                    </div>
-                    <div class="update-symbol achievement-symbol" aria-hidden="true">🏆</div>
-                    <h3>Celebrate Student Success</h3>
-                    <p>Recognize student milestones, outstanding performances, and achievements worth celebrating.</p>
-                    <div class="update-card-footer">
-                        <span>Achievements</span>
-                        <span class="update-read">Explore update <span aria-hidden="true">→</span></span>
-                    </div>
-                </a>
-
-                <a class="update-card" href="organizations.html">
-                    <div class="update-card-top">
-                        <span class="update-category organization-category">ORGANIZATION NEWS</span>
-                        <span class="update-arrow" aria-hidden="true">↗</span>
-                    </div>
-                    <div class="update-symbol organization-symbol" aria-hidden="true">👥</div>
-                    <h3>Connect Through Organizations</h3>
-                    <p>Discover student organizations, learn about their activities, and find communities that interest you.</p>
-                    <div class="update-card-footer">
-                        <span>Student Organizations</span>
-                        <span class="update-read">Explore update <span aria-hidden="true">→</span></span>
-                    </div>
-                </a>
+            <h3>Three students turned an idea into SCon</h3>
+            <p>
+              Arron, Jersli, and Ferlouie worked together to bring campus
+              events, organizations, and achievements into one place. Your ideas
+              and effort can make a difference too.
+            </p>
+            <div class="update-card-footer">
+              <span>Meet the team</span>
+              <a class="update-read"
+                href="achievements.html#organization-heading"
+                >Explore <span aria-hidden="true">→</span></a
+              >
             </div>
-
-            <div class="updates-bottom">
-                <span class="updates-bottom-dot" aria-hidden="true"></span>
-                <p>Stay informed. Get involved. Be part of the SCon community.</p>
+            <div class="post-actions">
+              <button
+                class="post-action like-action"
+                type="button"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">♡</span> Like
+                <span class="like-count">18</span></button
+              ><button
+                class="post-action comment-action"
+                type="button"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">▢</span> Comment</button
+              ><button class="post-action share-action" type="button">
+                <span aria-hidden="true">↗</span> Share
+              </button>
             </div>
-            <p class="search-empty" id="search-empty" hidden>No campus updates match your search. Try another keyword.</p>
-        </section>
+            <div class="post-comments" hidden>
+              <div class="comment-list"></div>
+              <form class="comment-form">
+                <label class="sr-only" for="comment-scon-spotlight"
+                  >Write a comment</label
+                ><input
+                  id="comment-scon-spotlight"
+                  name="comment"
+                  maxlength="240"
+                  placeholder="Write a comment..."
+                  required
+                /><button type="submit">Post</button>
+              </form>
+            </div>
+          </article>
+
+          <article class="update-card" data-post-id="student-highlights">
+            <div class="post-author">
+              <img
+                class="post-avatar"
+                src="../images/technopacer.png"
+                alt="Technopacer"
+              />
+              <span class="post-author-details"
+                ><strong>Technopacer</strong
+                ><small>Student recognition · Campus Journalism</small></span
+              ><span class="post-visibility">Public</span>
+            </div>
+            <img
+              class="update-card-image"
+              src="../images/discover_card_3.png"
+              alt="Students celebrating a campus achievement"
+            />
+            <div class="update-card-top">
+              <span class="update-category achievement-category"
+                >STUDENT HIGHLIGHTS</span
+              >
+            </div>
+            <h3>See what students can achieve</h3>
+            <p>
+              Celebrate student effort in sports, academics, competitions, and
+              projects—and find examples that can inspire your own goals.
+            </p>
+            <div class="update-card-footer">
+              <span>Student achievements</span
+              ><a class="update-read" href="achievements.html"
+                >Explore <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <div class="post-actions">
+              <button
+                class="post-action like-action"
+                type="button"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">♡</span> Like
+                <span class="like-count">32</span></button
+              ><button
+                class="post-action comment-action"
+                type="button"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">▢</span> Comment</button
+              ><button class="post-action share-action" type="button">
+                <span aria-hidden="true">↗</span> Share
+              </button>
+            </div>
+            <div class="post-comments" hidden>
+              <div class="comment-list"></div>
+              <form class="comment-form">
+                <label class="sr-only" for="comment-student-highlights"
+                  >Write a comment</label
+                ><input
+                  id="comment-student-highlights"
+                  name="comment"
+                  maxlength="240"
+                  placeholder="Write a comment..."
+                  required
+                /><button type="submit">Post</button>
+              </form>
+            </div>
+          </article>
+
+          <article class="update-card" data-post-id="organization-news">
+            <div class="post-author">
+              <img
+                class="post-avatar"
+                src="../images/CUSG.png"
+                alt="CUSG"
+              />
+              <span class="post-author-details"
+                ><strong>CHMSU University Student Government</strong
+                ><small>Community update · Student life</small></span
+              ><span class="post-visibility">Public</span>
+            </div>
+            <img
+              class="update-card-image"
+              src="../images/organizations-banner.png"
+              alt="Students building community through organizations"
+            />
+            <div class="update-card-top">
+              <span class="update-category organization-category"
+                >ORGANIZATION NEWS</span
+              >
+            </div>
+            <h3>Meet people who share your interests</h3>
+            <p>
+              Browse CHMSU groups by activity and see how joining can help you
+              learn new skills, contribute, and make friends.
+            </p>
+            <div class="update-card-footer">
+              <span>Student organizations</span
+              ><a class="update-read" href="organizations.html"
+                >Explore <span aria-hidden="true">→</span></a
+              >
+            </div>
+            <div class="post-actions">
+              <button
+                class="post-action like-action"
+                type="button"
+                aria-pressed="false"
+              >
+                <span aria-hidden="true">♡</span> Like
+                <span class="like-count">24</span></button
+              ><button
+                class="post-action comment-action"
+                type="button"
+                aria-expanded="false"
+              >
+                <span aria-hidden="true">▢</span> Comment</button
+              ><button class="post-action share-action" type="button">
+                <span aria-hidden="true">↗</span> Share
+              </button>
+            </div>
+            <div class="post-comments" hidden>
+              <div class="comment-list"></div>
+              <form class="comment-form">
+                <label class="sr-only" for="comment-organization-news"
+                  >Write a comment</label
+                ><input
+                  id="comment-organization-news"
+                  name="comment"
+                  maxlength="240"
+                  placeholder="Write a comment..."
+                  required
+                /><button type="submit">Post</button>
+              </form>
+            </div>
+          </article>
+        </div>
+        <div class="updates-bottom">
+          <span class="updates-bottom-dot" aria-hidden="true"></span>
+          <p>
+            Your story belongs here too. Find something you care about, take the
+            first step, and let your effort grow.
+          </p>
+        </div>
+        <p class="search-empty" id="search-empty" hidden>
+          No campus updates match your search. Try another keyword.
+        </p>
+      </section>
     </main>
 
-    <!-- 4. FOOTER -->
     <footer class="site-footer">
-        <div class="footer-main">
-            <div class="footer-brand">
-                <a href="home.html" class="footer-logo">SCon<span>.</span></a>
-                <p>Students Connect — your campus community, all in one place. Discover events, connect with organizations, and celebrate student achievements.</p>
-                <span class="footer-tagline">Discover. Connect. Participate.</span>
-            </div>
-
-            <div class="footer-links">
-                <h3>Explore</h3>
-                <a href="home.html">Home</a>
-                <a href="discover.html">Discover</a>
-                <a href="events.html">Events</a>
-            </div>
-
-            <div class="footer-links">
-                <h3>Community</h3>
-                <a href="organizations.html">Organizations</a>
-                <a href="achievements.html">Achievements</a>
-                <a href="home.html#updates">Latest Updates</a>
-            </div>
-
-            <div class="footer-message">
-                <span class="footer-message-icon" aria-hidden="true">✦</span>
-                <h3>Your campus story starts here.</h3>
-                <p>Be part of the community. Find your place at CHMSU.</p>
-                <a href="discover.html" class="footer-cta">Discover SCon <span aria-hidden="true">↗</span></a>
-            </div>
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="home.html" class="footer-logo">SCon<span>.</span></a>
+          <p>
+            Students Connect — your campus community, all in one place. Discover
+            events, connect with organizations, and celebrate student
+            achievements.
+          </p>
+          <span class="footer-tagline">Discover. Connect. Participate.</span>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2026 SCon — Students Connect.</p>
-            <p>Made for the campus community.</p>
+        <div class="footer-links"><h3>Explore</h3><a href="home.html">Home</a><a href="discover.html">Discover</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="tryouts-auditions.html">Tryouts &amp; Auditions</a><a href="campus-calendar.html">Campus Calendar</a><a href="about.html">About SCon</a></div>
+
+        <div class="footer-links"><h3>Community</h3><a href="organizations.html">Organizations</a><a href="achievements.html">Achievements</a><a href="profile.html">My Profile</a><a href="saved-posts.html">Saved Posts</a><a href="settings.html">Settings</a><a href="help-support.html">Help &amp; Support</a><a href="community-guidelines.html">Community Guidelines</a><a href="guest.html">Sign Out / Guest</a></div>
+
+        <div class="footer-message">
+          <span class="footer-message-icon" aria-hidden="true">✦</span>
+          <h3>Your campus story starts here.</h3>
+          <p>Be part of the community. Find your place at CHMSU.</p>
+          <a href="discover.html" class="footer-cta"
+            >Discover SCon <span aria-hidden="true">↗</span></a
+          >
         </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SCon — Students Connect.</p>
+        <p>Made for the campus community.</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

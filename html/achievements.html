@@ -3,22 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>SCon | Achievements</title>
-
+    <title>SCon | Achievements & Recognition</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"/>
-
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/png" href="../images/SV Favicon.png" />
     <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/achievements.css">
+    <link rel="stylesheet" href="../css/achievements.css" />
+    <link rel="stylesheet" href="../css/pages.css" />
     <script src="../js/script.js" defer></script>
   </head>
-
   <body>
     <header>
       <nav class="navbar">
@@ -28,28 +25,634 @@
             <span>SCon</span>
           </a>
         </h2>
-
         <div class="nav-links">
           <a href="home.html">Home</a>
           <a href="discover.html">Discover</a>
           <a href="events.html">Events</a>
           <a href="organizations.html">Organizations</a>
-          <a href="achievements.html">Achievements</a>
+          <a href="achievements.html" aria-current="page">Achievements</a>
         </div>
-      </nav>
+              <div class="navbar-actions">
+          <div class="account-menu-wrap">
+            <button
+              class="account-menu-toggle"
+              type="button"
+              aria-label="Open account menu"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-controls="account-menu"
+            >
+              <img src="../images/SCon Students Connect Logo.png" alt="" />
+              <span class="account-menu-label">Account</span>
+              <span class="account-menu-caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="account-menu" id="account-menu" role="menu" hidden>
+              <div class="account-menu-profile">
+                <img src="../images/SCon Students Connect Logo.png" alt="" />
+                <span><strong>SCon Account</strong><small>Local demo profile</small></span>
+              </div>
+              <a href="profile.html" role="menuitem">My Profile</a>
+              <a href="settings.html" role="menuitem">Settings</a>
+              <a href="saved-posts.html" role="menuitem">Saved Posts</a>
+              <a href="help-support.html" role="menuitem">Help &amp; Support</a>
+              <div class="account-menu-divider" role="separator"></div>
+              <a href="guest.html" role="menuitem">Sign Out / Guest</a>
+            </div>
+          </div>
+        </div>      </nav>
     </header>
 
-    <main>
-      <section class="events-hero">
-        <span class="events-label">CAMPUS LIFE</span>
-
-        <h1>Campus Events</h1>
-
+    <main class="achievements-page">
+      <section class="achievements-hero">
+        <span class="achievements-label">CELEBRATING CAMPUS SUCCESS</span>
+        <h1>Student Achievements <span>&amp; Recognition</span></h1>
         <p>
-          Discover upcoming activities, join campus celebrations, and find
-          opportunities to connect with fellow students.
+          These stories show what students can achieve through practice,
+          teamwork, and learning. Explore each recognition to see what made it possible.
         </p>
       </section>
+
+      <section class="achievement-tools">
+        <div class="achievement-filter-row" aria-label="Filter achievements">
+          <button type="button" class="achievement-filter active" data-achievement-filter="all">
+            All
+          </button>
+          <button type="button" class="achievement-filter" data-achievement-filter="sports">
+            Sports
+          </button>
+          <button type="button" class="achievement-filter" data-achievement-filter="academic">
+            Academic
+          </button>
+          <button type="button" class="achievement-filter" data-achievement-filter="competition">
+            Competitions
+          </button>
+          <button type="button" class="achievement-filter" data-achievement-filter="organization">
+            Organizations &amp; Projects
+          </button>
+        </div>
+        <p class="feature-hint">
+          Use the filters to explore different kinds of campus recognition.
+        </p>
+      </section>
+
+<section class="recognition-section" data-achievement-category="sports" aria-labelledby="sports-heading">
+        <div class="recognition-heading">
+          <div>
+            <span class="section-label">01 / ATHLETICS</span>
+            <h2 id="sports-heading">Sports Achievements</h2>
+            <p>Recognizing sportsmanship, performance, and campus pride.</p>
+          </div>
+          <img
+            class="recognition-icon"
+            src="../images/sports_affairs.png"
+            alt="Sports Affairs"
+          />
+        </div>
+
+        <div class="recognition-grid sports-grid">
+          <article
+            class="recognition-card featured-recognition"
+            id="achievement-arron-mvp"
+            data-achievement-id="arron-mvp"
+            data-publisher="CHMSU Sports Affairs"
+            data-publisher-avatar="../images/sports_affairs.png"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/arron_mvp.png"
+                alt="Arron R. Sartorio basketball MVP"
+              />
+              <span class="recognition-badge">🏆 MVP SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category sports-category"
+                >BASKETBALL</span
+              >
+              <h3>Basketball Intramurals MVP</h3>
+              <p class="awardee-name">Arron R. Sartorio</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <p class="recognition-description">
+                Recognized for outstanding scoring, court awareness, and
+                leadership throughout the campus basketball intramurals.
+              </p>
+              <div class="recognition-footer">
+                <span>🏀 Basketball Recognition</span>
+              </div>
+              <div class="recognition-more">
+                <h4>Achievement Highlights</h4>
+                <div class="achievement-stats">
+                  <div><strong>20 PPG</strong><span>Points per game</span></div>
+                  <div>
+                    <strong>6 RPG</strong><span>Rebounds per game</span>
+                  </div>
+                  <div><strong>4 APG</strong><span>Assists per game</span></div>
+                </div>
+                <p>
+                  Arron earned the MVP recognition through consistent scoring,
+                  smart passing, and the ability to motivate teammates during
+                  close games. His all-around performance helped his team remain
+                  competitive throughout the tournament.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="recognition-card"
+            id="achievement-ferlouie-ml"
+            data-achievement-id="ferlouie-ml"
+            data-publisher="CHMSU Python Esports Club"
+            data-publisher-avatar="../images/pythons.png"
+            data-gallery-images="../images/ferlouie_ml.png ../images/sanferl.png ../images/sanferl2.png"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/ferlouie_ml.png"
+                alt="Ferlouie S. Baylon Mobile Legends MVP"
+              />
+              <span class="recognition-badge">🎮 MVP SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category esports-category">ESPORTS</span>
+              <h3>Mobile Legends Intramurals MVP</h3>
+              <p class="awardee-name">Ferlouie S. Baylon</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <p class="recognition-description">
+                Recognized for game awareness, coordinated team fights, and
+                consistent decision-making during the Mobile Legends
+                intramurals.
+              </p>
+              <div class="recognition-footer">
+                <span>🎮 Esports Recognition</span>
+              </div>
+              <div class="recognition-more">
+                <h4>Achievement Highlights</h4>
+                <div class="achievement-stats">
+                  <div><strong>8.5</strong><span>Average KDA</span></div>
+                  <div>
+                    <strong>72%</strong><span>Team fight participation</span>
+                  </div>
+                  <div><strong>5</strong><span>Matches played</span></div>
+                </div>
+                <p>
+                  Ferlouie's performance stood out through strategic rotations,
+                  timely team support, and objective control. His teamwork and
+                  calm decisions during important matches helped his squad
+                  maintain momentum.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+
+          <article
+            class="recognition-card"
+            id="achievement-jersli-volleyball"
+            data-achievement-id="jersli-volleyball"
+            data-publisher="CHMSU Sports Affairs"
+            data-publisher-avatar="../images/sports_affairs.png"
+            data-gallery-images="../images/jersli_vb.png ../images/jersli_vb2.png ../images/jersli_vb1.png"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/jersli_vb.png"
+                alt="Jersli John G. Caba volleyball MVP"
+              />
+              <span class="recognition-badge">🏐 MVP SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category volleyball-category"
+                >VOLLEYBALL</span
+              >
+              <h3>Volleyball Intramurals MVP</h3>
+              <p class="awardee-name">Jersli John G. Caba</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <p class="recognition-description">
+                Recognized for powerful attacks, dependable defense, and
+                teamwork during the campus volleyball intramurals.
+              </p>
+              <div class="recognition-footer">
+                <span>🏐 Volleyball Recognition</span>
+              </div>
+              <div class="recognition-more">
+                <h4>Achievement Highlights</h4>
+                <div class="achievement-stats">
+                  <div>
+                    <strong>12</strong><span>Average attack points</span>
+                  </div>
+                  <div><strong>8</strong><span>Successful digs</span></div>
+                  <div><strong>3</strong><span>Service aces</span></div>
+                </div>
+                <p>
+                  Jersli earned recognition for contributing on both offense and
+                  defense. His strong attacks, quick reactions, and
+                  communication with teammates made him an important part of the
+                  team's intramurals campaign.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="recognition-section" data-achievement-category="academic" aria-labelledby="academic-heading">
+        <div class="recognition-heading">
+          <div>
+            <span class="section-label">02 / LEARNING</span>
+            <h2 id="academic-heading">Academic Excellence</h2>
+            <p>Celebrating dedication to learning and academic growth.</p>
+          </div>
+          <img
+            class="recognition-icon"
+            src="../images/chmsu_logo.png"
+            alt="CHMSU Logo"
+          />
+        </div>
+
+        <div class="recognition-grid">
+          <article
+            class="recognition-card"
+            id="achievement-ferlouie-academic"
+            data-achievement-id="ferlouie-academic"
+            data-publisher="CHMSU University Student Government - CUSG"
+            data-publisher-avatar="../images/CUSG.png"
+            data-award-video="../videos/ferlouie_awarding.mp4"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/ferlouie_academic.png"
+                alt="Ferlouie S. Baylon academic recognition"
+              />
+              <span class="recognition-badge">🎓 ACADEMIC SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category academic-category"
+                >ACADEMIC RECOGNITION</span
+              >
+              <h3>Academic Excellence</h3>
+              <p class="awardee-name">Ferlouie S. Baylon</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <p class="recognition-description">
+                Recognized for outstanding academic performance during the first
+                semester of the second year of the BSIT program.
+              </p>
+              <div class="recognition-footer">
+                <span>📚 Academic Recognition</span>
+              </div>
+              <div class="recognition-more">
+                <h4>Achievement Highlights</h4>
+                <div class="achievement-stats">
+                  <div><strong>95</strong><span>Average grade</span></div>
+                  <div>
+                    <strong>Consistent</strong><span>Study routine</span>
+                  </div>
+                  <div>
+                    <strong>Strong</strong><span>Project performance</span>
+                  </div>
+                </div>
+                <p>
+                  Ferlouie's achievement reflects steady preparation, active
+                  participation, and commitment to understanding course lessons.
+                  His approach to reviewing topics and completing requirements
+                  represents the value of persistence in college learning.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="recognition-section"
+        data-achievement-category="competition"
+        aria-labelledby="competition-heading"
+      >
+        <div class="recognition-heading">
+          <div>
+            <span class="section-label">03 / INNOVATION</span>
+            <h2 id="competition-heading">
+              Competitions &amp; Special Recognition
+            </h2>
+            <p>
+              Highlighting creativity, technical skills, and competitive spirit.
+            </p>
+          </div>
+          <img
+            class="recognition-icon"
+            src="../images/chmsu_logo.png"
+            alt="CHMSU Logo"
+          />
+        </div>
+
+        <div class="recognition-grid">
+          <article
+            class="recognition-card"
+            id="achievement-jersli-it-competition"
+            data-achievement-id="jersli-it-competition"
+            data-publisher="The Technopacer"
+            data-publisher-avatar="../images/technopacer.png"
+            data-award-video="../videos/jersli_awarding.mp4"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/jersli_it_competition.png"
+                alt="Jersli John G. Caba IT competition recognition"
+              />
+              <span class="recognition-badge">💻 IT SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category competition-category"
+                >IT COMPETITION</span
+              >
+              <h3>International IT Competition — First Runner-Up</h3>
+              <p class="awardee-name">Jersli John G. Caba</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <p class="recognition-description">
+                Recognized for technical knowledge, problem-solving, and
+                innovation in an international IT competition.
+              </p>
+              <div class="recognition-footer">
+                <span>💡 Competition Recognition</span>
+              </div>
+              <div class="recognition-more">
+                <h3>International IT Competition — First Place</h3>
+                <div class="achievement-stats">
+                  <div>
+                    <strong>1st Place</strong><span>Final standing</span>
+                  </div>
+                  <div>
+                    <strong>Problem-solving</strong
+                    ><span>Technical strength</span>
+                  </div>
+                  <div>
+                    <strong>Teamwork</strong><span>Collaborative skills</span>
+                  </div>
+                </div>
+                <p>
+                  Jersli demonstrated careful analysis, creative thinking, and
+                  persistence while working through technical challenges.
+                  Reaching the final stage highlighted his willingness to learn,
+                  adapt, and apply classroom knowledge to practical problems.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="recognition-section"
+        data-achievement-category="organization"
+        aria-labelledby="organization-heading"
+      >
+        <div class="recognition-heading">
+          <div>
+            <span class="section-label">04 / TEAMWORK</span>
+            <h2 id="organization-heading">Organization &amp; Projects</h2>
+            <p>
+              Recognizing collaboration and the ideas students bring to life.
+            </p>
+          </div>
+          <img
+            class="recognition-icon"
+            src="../images/chmsu_logo.png"
+            alt="CHMSU Logo"
+          />
+        </div>
+
+        <div class="recognition-grid">
+          <article
+            class="recognition-card team-recognition"
+            id="achievement-scon-project"
+            data-achievement-id="scon-project"
+            data-publisher="The Technopacer"
+            data-publisher-avatar="../images/technopacer.png"
+            data-award-video="../videos/scon_awarding.mp4"
+          >
+            <div class="recognition-image">
+              <img
+                src="../images/scon_team.png"
+                alt="Students Connect project team"
+              />
+              <span class="recognition-badge">✨ TEAM SPOTLIGHT</span>
+            </div>
+            <div class="recognition-content">
+              <span class="recognition-category team-category"
+                >STUDENT PROJECT</span
+              >
+              <h3>Students Connect (SCon)</h3>
+              <p class="awardee-name">Project Creators</p>
+              <p class="awardee-course">BSIT 2A</p>
+              <div class="team-members">
+                <span>Arron R. Sartorio</span>
+                <span>Ferlouie S. Baylon</span>
+                <span>Jersli John G. Caba</span>
+              </div>
+              <p class="recognition-description">
+                Recognized for collaborating on SCon, a campus community website
+                designed to help students discover events, organizations, and
+                student achievements.
+              </p>
+              <div class="recognition-footer">
+                <span>🤝 Project Collaboration &amp; Creativity</span>
+              </div>
+              <div class="recognition-more">
+                <h4>Project Highlights</h4>
+                <div class="achievement-stats">
+                  <div><strong>3</strong><span>Student creators</span></div>
+                  <div><strong>5</strong><span>Main website pages</span></div>
+                  <div><strong>1</strong><span>Campus community</span></div>
+                </div>
+                <p>
+                  The team developed SCon to bring campus information together
+                  in one place. Its pages highlight student organizations,
+                  events, and achievements while giving students a central place
+                  to explore campus activities and celebrate one another's
+                  progress.
+                </p>
+              </div>
+              <button
+                class="recognition-toggle"
+                type="button"
+                aria-expanded="false"
+              >
+                Read More <span>＋</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="recognition-cta">
+        <span aria-hidden="true">✦</span>
+        <div>
+          <h2>Every achievement deserves to be celebrated.</h2>
+          <p>
+            SCon brings student accomplishments and campus stories into one
+            community.
+          </p>
+        </div>
+        <a href="home.html" class="recognition-cta-link"
+          >Explore SCon <span aria-hidden="true">↗</span></a
+        >
+      </section>
     </main>
+    <div class="achievement-modal-backdrop" id="achievement-modal" hidden>
+      <section
+        class="achievement-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="achievement-modal-title"
+        aria-describedby="achievement-modal-description"
+        tabindex="-1"
+      >
+        <button
+          class="achievement-modal-close"
+          type="button"
+          aria-label="Close achievement details"
+        >
+          ×
+        </button>
+        <div class="achievement-modal-media">
+          <div class="achievement-gallery" role="group" aria-label="Achievement photos">
+            <img class="achievement-modal-still" src="" alt="" />
+            <button
+              class="achievement-gallery-arrow achievement-gallery-previous"
+              type="button"
+              aria-label="Show previous image"
+              hidden
+            >
+              ‹
+            </button>
+            <button
+              class="achievement-gallery-arrow achievement-gallery-next"
+              type="button"
+              aria-label="Show next image"
+              hidden
+            >
+              ›
+            </button>
+            <span class="achievement-gallery-count" aria-live="polite" hidden></span>
+          </div>
+          <video
+            class="achievement-modal-video"
+            controls
+            playsinline
+            preload="metadata"
+            aria-label="Achievement award video"
+            hidden
+          ></video>
+          <p class="achievement-video-caption">Achievement moment · SCon</p>
+        </div>
+        <div class="achievement-modal-details">
+          <div class="achievement-modal-heading">
+            <img class="achievement-modal-avatar" src="../images/SV Favicon.png" alt="" />
+            <div>
+              <span class="achievement-modal-kicker">SCon · Achievement story</span>
+              <p class="achievement-modal-byline">Shared with the campus community</p>
+            </div>
+          </div>
+          <div class="achievement-modal-copy">
+            <span class="achievement-modal-category"></span>
+            <h2 id="achievement-modal-title"></h2>
+            <p class="achievement-modal-awardee"></p>
+            <p id="achievement-modal-description"></p>
+            <div class="achievement-modal-highlights"></div>
+          </div>
+          <div class="achievement-social-summary">
+            <span class="achievement-like-total">18 likes</span>
+            <span><span class="achievement-comment-total">0</span> comments</span>
+          </div>
+          <div class="achievement-social-actions">
+            <button type="button" class="achievement-like-button" aria-pressed="false">
+              <span aria-hidden="true">♡</span> Like
+            </button>
+            <button type="button" class="achievement-comment-focus">
+              <span aria-hidden="true">▢</span> Comment
+            </button>
+            <button type="button" class="achievement-share-button">
+              <span aria-hidden="true">↗</span> Share
+            </button>
+          </div>
+          <div class="achievement-comments" aria-live="polite"></div>
+          <form class="achievement-comment-form">
+            <label class="visually-hidden" for="achievement-comment-input">Write a comment</label>
+            <input
+              id="achievement-comment-input"
+              type="text"
+              maxlength="240"
+              placeholder="Write a comment…"
+              autocomplete="off"
+            />
+            <button type="submit">Post</button>
+          </form>
+          <p class="achievement-share-status" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="home.html" class="footer-logo">SCon<span>.</span></a>
+          <p>
+            Students Connect — your campus community, all in one place. Discover
+            events, connect with organizations, and celebrate student
+            achievements.
+          </p>
+          <span class="footer-tagline">Discover. Connect. Participate.</span>
+        </div>
+
+        <div class="footer-links"><h3>Explore</h3><a href="home.html">Home</a><a href="discover.html">Discover</a><a href="events.html">Events</a><a href="announcements.html">Announcements</a><a href="tryouts-auditions.html">Tryouts &amp; Auditions</a><a href="campus-calendar.html">Campus Calendar</a><a href="about.html">About SCon</a></div>
+
+        <div class="footer-links"><h3>Community</h3><a href="organizations.html">Organizations</a><a href="achievements.html">Achievements</a><a href="profile.html">My Profile</a><a href="saved-posts.html">Saved Posts</a><a href="settings.html">Settings</a><a href="help-support.html">Help &amp; Support</a><a href="community-guidelines.html">Community Guidelines</a><a href="guest.html">Sign Out / Guest</a></div>
+
+        <div class="footer-message">
+          <span class="footer-message-icon" aria-hidden="true">✦</span>
+          <h3>Your campus story starts here.</h3>
+          <p>Be part of the community. Find your place at CHMSU.</p>
+          <a href="discover.html" class="footer-cta"
+            >Discover SCon <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 SCon — Students Connect.</p>
+        <p>Made for the campus community.</p>
+      </div>
+    </footer>
   </body>
 </html>
